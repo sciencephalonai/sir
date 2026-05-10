@@ -28,7 +28,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
 /* Shell */
 #deck{position:relative;width:100vw;height:100vh;overflow:hidden}
 .slide{
-  position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;
+  position:absolute;inset:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;
   padding:10px 36px 52px;
   opacity:0;transform:translateY(20px) scale(.997);
   transition:opacity .5s var(--ease),transform .5s var(--ease);
@@ -61,6 +61,12 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
 
 /* Body */
 .body{display:flex;flex-direction:column;gap:8px;min-height:0;overflow:hidden}
+.body.balanced{justify-content:space-between;gap:10px}
+.body.balanced > *{flex-shrink:0}
+
+/* Cover gets a denser hero composition on tall screens */
+.cover .body{justify-content:stretch}
+.cover .meta-card{padding:12px 14px}
 .kicker{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
 .slide.dark .kicker{color:var(--sci-cyan)}
 .headline{font-family:var(--font-disp);font-weight:800;font-size:clamp(17px,1.9vw,32px);line-height:1.1;letter-spacing:-.02em;color:var(--sci-navy)}
@@ -289,7 +295,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span>AP · SIR 2026 · Confidential</span>
     <span>Cover</span>
   </div>
-  <div class="body" style="flex:1;min-height:0;gap:0">
+  <div class="body balanced" style="flex:1;min-height:0;gap:0">
     <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(18px,2.2vw,40px);height:100%;align-items:stretch">
       <div style="display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:6px 0;height:100%">
         <div style="display:flex;flex-direction:column;gap:4px;position:relative;z-index:2">
@@ -329,7 +335,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>01 · Executive Summary</span><span>02 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">Executive Summary</div>
     <h2 class="headline">Deletions can decide 50+ seats. The window to act is now.</h2>
 
@@ -409,7 +415,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>02 · SIR Track Record</span><span>03 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">SIR Deletion Track Record — Verified Numbers</div>
     <h2 class="headline">Three states. The pattern is documented and consistent.</h2>
 
@@ -447,7 +453,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>03 · 2024 Margin Analysis</span><span>04 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">2024 AP Election Results &amp; Next Election Vulnerability</div>
     <h2 class="headline">A 20.4-lakh deletion erases 75% of the statewide 2024 deficit — before voting begins.</h2>
 
@@ -554,7 +560,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>04 · AP Baseline</span><span>05 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">Andhra Pradesh Electoral Baseline — January 22, 2024 Final Roll · AP CEO Office</div>
     <h2 class="headline">Every number the platform must protect.</h2>
 
@@ -594,7 +600,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>05 · The Proposal</span><span>06 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">Parallel Special Intensive Revision</div>
     <h2 class="headline">A shadow enumeration that catches every wrongful deletion before it's permanent.</h2>
 
@@ -852,7 +858,7 @@ body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-nav
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
     <span>10 · Resources &amp; Commitments</span><span>11 / 14</span>
   </div>
-  <div class="body" style="flex:1;min-height:0">
+  <div class="body balanced" style="flex:1;min-height:0">
     <div class="kicker">What the Three Principals Are Committing</div>
     <h2 class="headline">Platform engineering, ground operations, and program delivery — fully resourced.</h2>
 
