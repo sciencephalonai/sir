@@ -4,1254 +4,1046 @@
 <meta charset="utf-8">
 <title>AP Voter Protection Mission · SciEncephalon AI</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Andhra Pradesh Voter Protection Mission — Parallel Special Intensive Revision Platform. Confidential proposal by SciEncephalon AI for YSRCP leadership.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --sci-blue:#0076a3;
-    --sci-cyan:#00c2e8;
-    --sci-navy:#1a2744;
-    --sci-ink:#0b1120;
-    --sci-white:#ffffff;
-    --sci-gray:#f4f7fb;
-    --sci-hair:rgba(26,39,68,.08);
-    --sci-muted:#94a3b8;
-    --sci-muted-2:#64748b;
-    --sci-success:#10b981;
-    --sci-alert:#f59e0b;
-    --sci-danger:#ef4444;
-    --grad:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));
-    --ease:cubic-bezier(.22,1,.36,1);
-    --font-disp:'Playfair Display',Georgia,serif;
-    --font-brand:'Audiowide',system-ui,sans-serif;
-    --font-tag:'Quicksand','Inter',sans-serif;
-    --font-body:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-    --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
-  }
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;overflow:hidden}
-  body{
-    font-family:var(--font-body);
-    color:var(--sci-navy);
-    background:var(--sci-navy);
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    font-feature-settings:"ss01","cv11";
-  }
+:root{
+  --sci-blue:#0076a3;--sci-cyan:#00c2e8;--sci-navy:#1a2744;
+  --sci-gray:#f4f7fb;--sci-hair:rgba(26,39,68,.08);
+  --sci-muted:#94a3b8;--sci-muted-2:#64748b;
+  --sci-success:#10b981;--sci-danger:#ef4444;
+  --grad:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));
+  --ease:cubic-bezier(.22,1,.36,1);
+  --font-disp:'Playfair Display',Georgia,serif;
+  --font-brand:'Audiowide',system-ui,sans-serif;
+  --font-tag:'Quicksand','Inter',sans-serif;
+  --font-body:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:var(--font-body);color:var(--sci-navy);background:var(--sci-navy);-webkit-font-smoothing:antialiased}
 
-  /* ---------- Shell ---------- */
-  #deck{position:relative;width:100vw;height:100vh;overflow:hidden;background:var(--sci-navy)}
-  .slide{
-    position:absolute;inset:0;width:100%;height:100%;
-    display:grid;grid-template-rows:auto 1fr auto;
-    padding:clamp(14px,2.4vw,32px) clamp(22px,3.6vw,60px) clamp(72px,6vw,96px);
-    opacity:0;transform:translateY(24px) scale(.995);
-    transition:opacity .55s var(--ease),transform .55s var(--ease);
-    pointer-events:none;
-    background:#fff;
-    overflow:hidden;
-  }
-  .slide.is-active{opacity:1;transform:none;pointer-events:auto;z-index:2}
-  .slide.dark{background:var(--sci-navy);color:#fff}
-  .slide.dark *{color:inherit}
+/* Shell */
+#deck{position:relative;width:100vw;height:100vh;overflow:hidden}
+.slide{
+  position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;
+  padding:10px 36px 52px;
+  opacity:0;transform:translateY(20px) scale(.997);
+  transition:opacity .5s var(--ease),transform .5s var(--ease);
+  pointer-events:none;background:#fff;overflow:hidden;
+}
+.slide.is-active{opacity:1;transform:none;pointer-events:auto;z-index:2}
+.slide.dark{background:var(--sci-navy);color:#fff}
+.slide.dark *{color:inherit}
 
-  /* ---------- Chrome ---------- */
-  .chrome-top{
-    display:flex;justify-content:space-between;align-items:center;
-    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--sci-muted-2);font-weight:600;
-  }
-  .slide.dark .chrome-top{color:rgba(255,255,255,.55)}
-  .chrome-top .brand{display:flex;align-items:center;gap:8px}
-  .chrome-top .brand::before{
-    content:"";display:block;width:8px;height:8px;border-radius:2px;
-    background:var(--grad);
-  }
+/* Chrome top */
+.chrome-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-muted-2);font-weight:600;padding-bottom:8px}
+.slide.dark .chrome-top{color:rgba(255,255,255,.5)}
+.brand-lockup{display:inline-flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;line-height:1}
+.brand-lockup .bl-brand{font-family:var(--font-brand);font-size:13px;letter-spacing:.02em;line-height:1;text-transform:none}
+.brand-lockup .bl-sci{background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand-lockup .bl-enc{color:var(--sci-navy);-webkit-text-fill-color:var(--sci-navy)}
+.slide.dark .brand-lockup .bl-enc{color:#fff;-webkit-text-fill-color:#fff}
+.brand-lockup .bl-ai{font-family:var(--font-brand);font-size:7px;letter-spacing:.1em;color:#fff;-webkit-text-fill-color:#fff;background:var(--grad);padding:2px 5px;border-radius:999px;line-height:1.2;margin-left:2px}
+.brand-lockup .bl-div{width:1px;height:12px;background:var(--sci-hair)}
+.slide.dark .brand-lockup .bl-div{background:rgba(255,255,255,.2)}
+.brand-lockup .bl-sub{font-family:var(--font-tag);font-size:8px;letter-spacing:.18em;font-weight:500;text-transform:uppercase;color:var(--sci-muted-2);line-height:1}
+.slide.dark .brand-lockup .bl-sub{color:rgba(255,255,255,.6)}
 
-  /* ---------- Brand lockup ---------- */
-  .brand-lockup{
-    display:inline-flex;align-items:center;gap:10px;
-    text-transform:none;letter-spacing:0;line-height:1;
-  }
-  .brand-lockup .bl-brand{
-    font-family:var(--font-brand);font-size:15px;letter-spacing:.02em;line-height:1;text-transform:none;
-  }
-  .brand-lockup .bl-sci{
-    background:linear-gradient(135deg,var(--sci-blue) 0%,var(--sci-cyan) 100%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .brand-lockup .bl-enc{color:var(--sci-navy);-webkit-text-fill-color:var(--sci-navy)}
-  .slide.dark .brand-lockup .bl-enc{color:#fff;-webkit-text-fill-color:#fff}
-  .brand-lockup .bl-ai{
-    font-family:var(--font-brand);font-size:8px;letter-spacing:.1em;
-    color:#fff;-webkit-text-fill-color:#fff;
-    background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));
-    padding:2px 6px;border-radius:999px;line-height:1.2;margin-left:3px;
-  }
-  .brand-lockup .bl-div{width:1px;height:14px;background:var(--sci-hair)}
-  .slide.dark .brand-lockup .bl-div{background:rgba(255,255,255,.2)}
-  .brand-lockup .bl-sub{
-    font-family:var(--font-tag);
-    font-size:9px;letter-spacing:.2em;font-weight:500;text-transform:uppercase;
-    color:var(--sci-muted-2);line-height:1;
-  }
-  .slide.dark .brand-lockup .bl-sub{color:rgba(255,255,255,.65)}
+/* Chrome bottom */
+.chrome-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--sci-hair);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--sci-muted);font-weight:500}
+.slide.dark .chrome-bottom{border-top-color:rgba(255,255,255,.12);color:rgba(255,255,255,.5)}
+.chrome-bottom .progress{flex:1;height:2px;margin:0 18px;background:var(--sci-hair);border-radius:2px;position:relative;overflow:hidden}
+.slide.dark .chrome-bottom .progress{background:rgba(255,255,255,.12)}
+.chrome-bottom .progress>i{position:absolute;inset:0;background:var(--grad);transform-origin:left;transform:scaleX(var(--p,0));transition:transform .5s var(--ease)}
 
-  .chrome-bottom{
-    display:flex;justify-content:space-between;align-items:center;
-    padding-top:12px;border-top:1px solid var(--sci-hair);
-    font-size:10px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--sci-muted);font-weight:500;
-  }
-  .slide.dark .chrome-bottom{border-top-color:rgba(255,255,255,.15);color:rgba(255,255,255,.55)}
-  .chrome-bottom .progress{
-    flex:1;height:2px;margin:0 24px;background:var(--sci-hair);
-    border-radius:2px;position:relative;overflow:hidden;
-  }
-  .slide.dark .chrome-bottom .progress{background:rgba(255,255,255,.15)}
-  .chrome-bottom .progress>i{
-    position:absolute;inset:0;background:var(--grad);transform-origin:left;
-    transform:scaleX(var(--p,0));transition:transform .5s var(--ease);
-  }
+/* Body */
+.body{display:flex;flex-direction:column;gap:8px;min-height:0;overflow:hidden}
+.kicker{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
+.slide.dark .kicker{color:var(--sci-cyan)}
+.headline{font-family:var(--font-disp);font-weight:800;font-size:clamp(17px,1.9vw,32px);line-height:1.1;letter-spacing:-.02em;color:var(--sci-navy)}
+.slide.dark .headline{color:#fff}
 
-  /* ---------- Body ---------- */
-  .body{display:flex;flex-direction:column;gap:clamp(10px,1.1vw,18px);align-content:start;min-height:0;overflow:hidden}
-  .headline + .deck-text,.headline + p{margin-top:0}
-  .kicker + .headline{margin-top:-2px}
-  .kicker{
-    font-size:clamp(10.5px,.72vw,13px);letter-spacing:.26em;text-transform:uppercase;
-    color:var(--sci-blue);font-weight:700;
-  }
-  .slide.dark .kicker{color:var(--sci-cyan)}
-  .headline{
-    font-family:var(--font-disp);font-weight:800;
-    font-size:clamp(20px,2.4vw,50px);line-height:1.08;letter-spacing:-.02em;
-    color:var(--sci-navy);max-width:40ch;
-  }
-  .slide.dark .headline{color:#fff}
-  .deck-text{
-    font-style:italic;color:var(--sci-muted-2);font-size:clamp(12px,1vw,18px);
-    line-height:1.5;max-width:96ch;margin-top:-4px;
-  }
-  .slide.dark .deck-text{color:rgba(255,255,255,.75)}
+/* Cover */
+.cover{position:relative;overflow:hidden}
+.cover::before,.cover::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none}
+.cover::before{width:640px;height:640px;right:-180px;top:-200px;background:radial-gradient(circle,var(--sci-cyan),transparent 60%)}
+.cover::after{width:560px;height:560px;left:-140px;bottom:-220px;background:radial-gradient(circle,var(--sci-blue),transparent 60%)}
+.wordmark{font-family:var(--font-brand);font-size:clamp(36px,4.2vw,80px);line-height:1;letter-spacing:.03em;position:relative;z-index:2;display:inline-flex;align-items:baseline;gap:8px}
+.wordmark .sci{background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wordmark .enc{color:#fff;-webkit-text-fill-color:#fff}
+.wordmark .ai{font-family:var(--font-brand);font-size:.22em;color:#fff;-webkit-text-fill-color:#fff;background:var(--grad);padding:6px 12px;border-radius:999px;line-height:1.2;align-self:center;letter-spacing:.08em}
+.cover-accent{width:100%;max-width:380px;height:2px;background:linear-gradient(90deg,var(--sci-cyan),var(--sci-blue) 55%,rgba(255,255,255,.8));opacity:.85;position:relative;z-index:2}
+.meta-card{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.11);border-radius:12px;padding:10px 14px;color:rgba(255,255,255,.88);font-size:clamp(11.5px,.88vw,15px);line-height:1.45;flex:1;display:flex;flex-direction:column;justify-content:center}
+.meta-card .k{color:var(--sci-cyan);font-weight:700;letter-spacing:.18em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+.meta-card strong{color:#fff;font-weight:700}
+.hero-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative;z-index:2}
+.hs{background:rgba(255,255,255,.04);border:1px solid rgba(0,194,232,.2);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:3px}
+.hs .v{font-family:var(--font-disp);font-weight:800;font-size:clamp(16px,1.4vw,24px);line-height:1;background:linear-gradient(135deg,var(--sci-cyan),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hs .l{font-size:clamp(8.5px,.6vw,10.5px);letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.65);font-weight:600;line-height:1.3}
+.chip-row{display:flex;flex-wrap:wrap;gap:5px;position:relative;z-index:2}
+.chip{font-family:var(--font-mono);font-size:clamp(9px,.62vw,10.5px);letter-spacing:.07em;color:var(--sci-cyan);border:1px solid rgba(0,194,232,.3);border-radius:999px;padding:3px 9px;background:rgba(0,194,232,.05)}
+.cbadge{display:inline-flex;align-items:center;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.55);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:999px;padding:3px 10px;position:relative;z-index:2}
 
-  /* ---------- Cover ---------- */
-  .cover{position:relative;overflow:hidden}
-  .cover::before,.cover::after{
-    content:"";position:absolute;border-radius:50%;
-    filter:blur(60px);opacity:.55;pointer-events:none;
-  }
-  .cover::before{width:700px;height:700px;right:-220px;top:-240px;
-    background:radial-gradient(circle,var(--sci-cyan) 0%,transparent 60%);}
-  .cover::after{width:620px;height:620px;left:-160px;bottom:-260px;
-    background:radial-gradient(circle,var(--sci-blue) 0%,transparent 60%);}
-  .cover .wordmark{
-    font-family:var(--font-brand);font-size:clamp(40px,4.8vw,96px);
-    line-height:1;letter-spacing:.03em;padding-left:.02em;
-    position:relative;z-index:2;
-    display:inline-flex;align-items:baseline;gap:10px;
-  }
-  .cover .wordmark .sci{
-    background:linear-gradient(135deg,var(--sci-blue) 0%,var(--sci-cyan) 100%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .cover .wordmark .enc{color:#fff;-webkit-text-fill-color:#fff}
-  .cover .wordmark .ai{
-    font-family:var(--font-brand);font-size:.24em;letter-spacing:.1em;
-    color:#fff;-webkit-text-fill-color:#fff;
-    background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));
-    padding:7px 14px;border-radius:999px;line-height:1.2;align-self:center;
-  }
-  .cover .capstmt{
-    font-family:var(--font-disp);font-style:italic;font-weight:600;
-    font-size:clamp(16px,1.7vw,34px);color:#fff;margin-top:12px;position:relative;z-index:2;
-    line-height:1.25;
-  }
-  .cover .capstmt span{color:var(--sci-cyan)}
-  .cover .tagline{
-    margin-top:10px;font-family:var(--font-tag);color:var(--sci-cyan);
-    letter-spacing:.2em;text-transform:uppercase;font-size:clamp(10px,.8vw,14px);font-weight:600;
-    position:relative;z-index:2;
-  }
-  .cover .contact{margin-top:auto;position:relative;z-index:2;color:rgba(255,255,255,.75)}
-  .cover .contact strong{color:#fff}
-  .cover .contact a{color:var(--sci-cyan);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
-  .cover .contact a:hover{border-color:var(--sci-cyan)}
-  .cover .right{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;align-items:stretch;width:100%}
-  .cover .meta-card{
-    background:rgba(255,255,255,.06);backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:clamp(16px,1.4vw,26px) clamp(18px,1.6vw,28px);
-    color:rgba(255,255,255,.88);font-size:clamp(13px,.98vw,18px);line-height:1.5;flex:1;
-    display:flex;flex-direction:column;justify-content:center;
-  }
-  .cover .meta-card .k{color:var(--sci-cyan);font-weight:600;letter-spacing:.2em;font-size:clamp(10px,.75vw,13px);text-transform:uppercase;display:block;margin-bottom:clamp(5px,.5vw,10px)}
-  .cover .meta-card strong{color:#fff;font-weight:700}
-  .cover .hero-stats-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;position:relative;z-index:2;
-  }
-  .cover .hero-stat{
-    background:rgba(255,255,255,.04);border:1px solid rgba(0,194,232,.22);border-radius:12px;
-    padding:10px 12px;display:flex;flex-direction:column;gap:4px;backdrop-filter:blur(4px);
-    transition:transform .3s var(--ease),border-color .3s var(--ease);
-  }
-  .cover .hero-stat:hover{transform:translateY(-2px);border-color:rgba(0,194,232,.55)}
-  .cover .hero-stat .v{
-    font-family:var(--font-disp);font-weight:800;font-size:clamp(18px,1.5vw,28px);line-height:1;
-    background:linear-gradient(135deg,var(--sci-cyan),#ffffff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .cover .hero-stat .l{
-    font-size:clamp(9px,.64vw,11px);letter-spacing:.18em;text-transform:uppercase;
-    color:rgba(255,255,255,.7);font-weight:600;line-height:1.35;
-  }
-  .cover .cover-accent{
-    width:100%;max-width:420px;height:2px;position:relative;z-index:2;
-    background:linear-gradient(90deg,var(--sci-cyan) 0%,var(--sci-blue) 55%,rgba(255,255,255,.85) 100%);
-    opacity:.85;
-  }
-  .cover .hero-chips{display:flex;flex-wrap:wrap;gap:6px;position:relative;z-index:2}
-  .cover .hero-chip{
-    font-family:var(--font-mono);font-size:clamp(9.5px,.66vw,11.5px);letter-spacing:.08em;
-    color:var(--sci-cyan);border:1px solid rgba(0,194,232,.35);border-radius:999px;
-    padding:3px 10px;background:rgba(0,194,232,.06);
-  }
+/* Grid / Cards */
+.grid{display:grid;gap:8px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{position:relative;background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:10px 12px;overflow:hidden;transition:transform .3s var(--ease)}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.card:hover{transform:translateY(-2px)}
+.card .ck{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sci-blue);margin-bottom:3px}
+.card .cv{font-family:var(--font-disp);font-weight:800;font-size:clamp(17px,1.5vw,26px);color:var(--sci-navy);line-height:1.1}
+.card .ct{font-size:clamp(10.5px,.82vw,13.5px);color:var(--sci-muted-2);line-height:1.4;margin-top:2px}
 
-  /* ---------- Grids / Cards ---------- */
-  .grid{display:grid;gap:clamp(12px,1.2vw,18px)}
-  .grid.c2{grid-template-columns:repeat(2,1fr)}
-  .grid.c3{grid-template-columns:repeat(3,1fr)}
-  .grid.c4{grid-template-columns:repeat(4,1fr)}
+/* So-what banner */
+.sw{background:var(--sci-navy);color:#fff;padding:8px 16px;border-radius:10px;font-family:var(--font-disp);font-style:italic;font-size:clamp(11px,.86vw,14.5px);line-height:1.45;position:relative;overflow:hidden;flex-shrink:0}
+.sw::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--sci-cyan)}
+.sw.danger{background:#3f0808}
+.sw.danger::before{background:var(--sci-danger)}
+.sw b{color:var(--sci-cyan);font-style:normal;font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:9px;margin-right:10px}
+.sw.danger b{color:#fca5a5}
 
-  .card{
-    position:relative;background:#fff;border:1px solid var(--sci-hair);
-    border-radius:16px;padding:20px 22px;
-    box-shadow:0 10px 24px -18px rgba(15,23,42,.18);
-    overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease);
-  }
-  .card::before{
-    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad);
-  }
-  .card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -28px rgba(15,23,42,.3)}
-  .card .k{
-    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
-    font-weight:700;color:var(--sci-blue);margin-bottom:6px;
-  }
+/* Stat bars */
+.sbar{display:grid;gap:8px;flex-shrink:0}
+.sbar.g4{grid-template-columns:repeat(4,1fr)}
+.sbar.g3{grid-template-columns:repeat(3,1fr)}
+.sb{background:var(--sci-navy);color:#fff;border-radius:10px;padding:9px 12px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:3px}
+.sb::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.sb.d::before{background:linear-gradient(135deg,var(--sci-danger),#f97316)}
+.sb .sk{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
+.sb.d .sk{color:#fca5a5}
+.sb .sv{font-family:var(--font-disp);font-weight:800;font-size:clamp(15px,1.5vw,26px);color:#fff;line-height:1}
+.sb .sl{color:rgba(255,255,255,.75);font-size:clamp(9.5px,.75vw,12.5px);line-height:1.3}
 
-  /* ---------- Nav ---------- */
-  .nav{
-    position:fixed;z-index:50;bottom:18px;left:50%;transform:translateX(-50%);
-    display:flex;align-items:center;gap:10px;padding:8px 14px;
-    background:rgba(26,39,68,.92);backdrop-filter:blur(14px);
-    border-radius:999px;border:1px solid rgba(255,255,255,.08);
-    color:rgba(255,255,255,.85);font-size:13px;
-  }
-  .nav button{
-    width:32px;height:32px;border-radius:999px;border:1px solid rgba(255,255,255,.2);
-    background:transparent;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
-    transition:background .25s var(--ease),transform .25s var(--ease);
-  }
-  .nav button:hover{background:var(--sci-cyan);color:var(--sci-navy);transform:translateY(-1px)}
-  .nav .counter{font-family:var(--font-mono);font-size:12px;min-width:56px;text-align:center;letter-spacing:.08em}
-  .nav .dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.25);cursor:pointer;transition:background .3s}
-  .nav .dot.is-on{background:var(--sci-cyan)}
+/* Pillars */
+.pillars{display:grid;gap:8px;flex:1;min-height:0}
+.pillar{background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:11px 13px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:5px;height:100%}
+.pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.pillar .pnum{font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.8vw,32px);color:var(--sci-blue);line-height:1;opacity:.3}
+.pillar .pk{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
+.pillar h4{font-family:var(--font-disp);font-size:clamp(11.5px,1vw,16px);color:var(--sci-navy);font-weight:700;line-height:1.2}
+.pillar p{font-size:clamp(10px,.78vw,13px);color:var(--sci-muted-2);line-height:1.45;flex:1}
+.pillar .tr{display:flex;justify-content:space-between;align-items:flex-start}
 
-  /* ---------- So-what ---------- */
-  .sowhat{background:var(--sci-navy);color:#fff;padding:clamp(14px,1.2vw,26px) clamp(20px,1.8vw,34px);border-radius:12px;font-family:var(--font-disp);font-style:italic;font-size:clamp(13px,1.1vw,20px);line-height:1.5;position:relative;overflow:hidden}
-  .sowhat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--sci-cyan)}
-  .sowhat b{color:var(--sci-cyan);font-style:normal;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(10px,.78vw,14px);margin-right:12px}
+/* Data table */
+.dtable{width:100%;border-collapse:collapse;flex-shrink:0}
+.dtable th{font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sci-blue);padding:6px 10px;border-bottom:2px solid var(--sci-hair);text-align:left;background:#fff}
+.dtable td{font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);padding:5px 10px;border-bottom:1px solid var(--sci-hair);line-height:1.3}
+.dtable tr:last-child td{border-bottom:none}
+.dtable tr:hover td{background:var(--sci-gray)}
+.dtable .bnum{font-family:var(--font-disp);font-weight:800;font-size:clamp(12px,1.05vw,17px);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dtable .warn{color:var(--sci-danger);font-weight:700}
+.dtable .src{font-size:8.5px;color:var(--sci-muted);letter-spacing:.1em;text-transform:uppercase}
 
-  /* ---------- Danger sowhat ---------- */
-  .sowhat.danger{background:#450a0a}
-  .sowhat.danger::before{background:var(--sci-danger)}
-  .sowhat.danger b{color:#fca5a5}
+/* Why/quad cards */
+.quad{display:grid;gap:8px;flex:1;min-height:0}
+.qcard{background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:12px 14px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:5px;height:100%}
+.qcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.qcard.dk{background:var(--sci-navy);color:#fff;border-color:transparent}
+.qcard .qk{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
+.qcard h4{font-family:var(--font-disp);font-size:clamp(12px,1.05vw,17px);color:var(--sci-navy);font-weight:700;line-height:1.15}
+.qcard.dk h4{color:#fff}
+.qcard p{font-size:clamp(10.5px,.82vw,13.5px);color:var(--sci-muted-2);line-height:1.48;flex:1}
+.qcard.dk p{color:rgba(255,255,255,.78)}
 
-  /* ---------- Pillar cards (6-up) ---------- */
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;flex:1;min-height:0}
-  .pillar{background:#fff;border:1px solid var(--sci-hair);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;box-shadow:0 8px 20px -16px rgba(15,23,42,.15);transition:transform .3s var(--ease);display:flex;flex-direction:column;gap:8px;height:100%}
-  .pillar:hover{transform:translateY(-3px);box-shadow:0 20px 40px -20px rgba(15,23,42,.25)}
-  .pillar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
-  .pillar .num{font-family:var(--font-disp);font-weight:800;font-size:clamp(28px,2.4vw,48px);color:var(--sci-blue);line-height:1;opacity:.35}
-  .pillar .pk{font-size:clamp(9.5px,.68vw,12px);letter-spacing:.22em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
-  .pillar h4{font-family:var(--font-disp);font-size:clamp(14px,1.2vw,22px);color:var(--sci-navy);font-weight:700;line-height:1.2}
-  .pillar p{font-size:clamp(11.5px,.92vw,15.5px);color:var(--sci-muted-2);line-height:1.55;flex:1}
-  .pillar .top-row{display:flex;justify-content:space-between;align-items:flex-start}
+/* Timeline */
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:1;min-height:0}
+.phase{background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:11px 13px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:5px;height:100%}
+.phase::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.phase.p2::before{background:linear-gradient(135deg,var(--sci-cyan),var(--sci-success))}
+.phase.p3::before{background:linear-gradient(135deg,var(--sci-success),#6366f1)}
+.phase .pl{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
+.phase h4{font-family:var(--font-disp);font-size:clamp(11.5px,1vw,16px);color:var(--sci-navy);font-weight:700;line-height:1.2}
+.phase .pr{font-family:var(--font-mono);font-size:clamp(9.5px,.72vw,12px);color:var(--sci-cyan);letter-spacing:.07em}
+.phase ul{list-style:none;display:flex;flex-direction:column;gap:4px;flex:1}
+.phase li{font-size:clamp(10px,.78vw,12.5px);color:var(--sci-muted-2);padding-left:12px;position:relative;line-height:1.3}
+.phase li::before{content:"";position:absolute;left:0;top:5px;width:4px;height:4px;background:var(--sci-cyan);border-radius:1px}
+.phase li strong{color:var(--sci-navy);font-weight:600}
 
-  /* ---------- Data table ---------- */
-  .data-table{width:100%;border-collapse:collapse;flex:1;min-height:0}
-  .data-table th{font-size:clamp(9.5px,.7vw,12px);letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sci-blue);padding:10px 14px;border-bottom:2px solid var(--sci-hair);text-align:left;background:#fff}
-  .data-table td{font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);padding:9px 14px;border-bottom:1px solid var(--sci-hair);line-height:1.4}
-  .data-table tr:last-child td{border-bottom:none}
-  .data-table tr:hover td{background:var(--sci-gray)}
-  .data-table .big-num{font-family:var(--font-disp);font-weight:800;font-size:clamp(16px,1.4vw,24px);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .data-table .warn{color:var(--sci-danger);font-weight:700}
-  .data-table .source{font-size:clamp(9px,.65vw,11px);color:var(--sci-muted);letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+/* Zones */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:1;min-height:0}
+.zone{background:#fff;border:1px solid var(--sci-hair);border-radius:10px;padding:9px 11px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:4px;height:100%}
+.zone::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.zone.hi::before{background:linear-gradient(135deg,var(--sci-danger),#f97316)}
+.zone.pilot::before{background:linear-gradient(135deg,var(--sci-cyan),var(--sci-success))}
+.zone .zl{font-size:8px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sci-blue)}
+.zone.hi .zl{color:var(--sci-danger)}
+.zone.pilot .zl{color:var(--sci-cyan)}
+.zone h5{font-family:var(--font-disp);font-size:clamp(11px,.88vw,14.5px);color:var(--sci-navy);font-weight:700;line-height:1.2}
+.zone .zr{font-size:clamp(9.5px,.74vw,12px);color:var(--sci-muted-2);line-height:1.4;flex:1}
+.zone .za{font-size:clamp(9px,.7vw,11.5px);color:var(--sci-blue);font-weight:600;border-top:1px solid var(--sci-hair);padding-top:4px;line-height:1.3}
+.zone.hi .za{color:var(--sci-danger)}
+.zone.pilot .za{color:var(--sci-cyan)}
 
-  /* ---------- Stat bar cards ---------- */
-  .stat-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;flex:0 0 auto}
-  .sb{background:var(--sci-navy);color:#fff;border-radius:14px;padding:16px 18px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px}
-  .sb::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
-  .sb.danger::before{background:linear-gradient(135deg,var(--sci-danger),#f97316)}
-  .sb .sk{font-size:clamp(9.5px,.68vw,12px);letter-spacing:.24em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
-  .sb.danger .sk{color:#fca5a5}
-  .sb .sv{font-family:var(--font-disp);font-weight:800;font-size:clamp(22px,1.9vw,36px);color:#fff;line-height:1}
-  .sb .sl{color:rgba(255,255,255,.82);font-size:clamp(11px,.9vw,15px);line-height:1.4}
+/* Team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:1;min-height:0}
+.tc{background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:12px 14px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:5px;height:100%}
+.tc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.tc .tr2{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
+.tc h4{font-family:var(--font-disp);font-size:clamp(13px,1.15vw,19px);color:var(--sci-navy);font-weight:700;line-height:1.2}
+.tc .org{font-family:var(--font-tag);font-size:clamp(9.5px,.76vw,12.5px);color:var(--sci-cyan);font-weight:600;letter-spacing:.06em}
+.tc ul{list-style:none;display:flex;flex-direction:column;gap:4px;flex:1}
+.tc li{font-size:clamp(10px,.78vw,13px);color:var(--sci-muted-2);padding-left:12px;position:relative;line-height:1.4}
+.tc li::before{content:"";position:absolute;left:0;top:5px;width:4px;height:4px;background:var(--sci-cyan);border-radius:1px}
 
-  /* ---------- Why/ask cards ---------- */
-  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;flex:1;min-height:0}
-  .why-card{background:#fff;border:1px solid var(--sci-hair);border-radius:14px;padding:22px 26px;position:relative;overflow:hidden;box-shadow:0 8px 20px -16px rgba(15,23,42,.15);transition:transform .3s var(--ease);display:flex;flex-direction:column;gap:10px;height:100%}
-  .why-card:hover{transform:translateY(-3px)}
-  .why-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
-  .why-card.dark{background:var(--sci-navy);color:#fff;border-color:transparent}
-  .why-card .pk{font-size:clamp(10px,.72vw,13px);letter-spacing:.22em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
-  .why-card h4{font-family:var(--font-disp);font-size:clamp(17px,1.5vw,28px);color:var(--sci-navy);font-weight:700;line-height:1.15}
-  .why-card.dark h4{color:#fff}
-  .why-card p{font-size:clamp(12px,.98vw,17px);color:var(--sci-muted-2);line-height:1.55;flex:1}
-  .why-card.dark p{color:rgba(255,255,255,.8)}
+/* Ask rows */
+.asks{display:flex;flex-direction:column;gap:6px;flex:1;min-height:0;overflow:hidden}
+.ar{display:grid;grid-template-columns:2fr 1.4fr;gap:10px;background:#fff;border:1px solid var(--sci-hair);border-radius:10px;padding:8px 13px;position:relative;overflow:hidden;align-items:start}
+.ar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.ar .ai{font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);font-weight:600;line-height:1.3}
+.ar .aw{font-size:clamp(10px,.78vw,12.5px);color:var(--sci-muted-2);line-height:1.4}
 
-  /* ---------- Timeline ---------- */
-  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;flex:1;min-height:0}
-  .phase{background:#fff;border:1px solid var(--sci-hair);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;height:100%}
-  .phase::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
-  .phase.p2::before{background:linear-gradient(135deg,var(--sci-cyan),var(--sci-success))}
-  .phase.p3::before{background:linear-gradient(135deg,var(--sci-success),#6366f1)}
-  .phase .ph-label{font-size:clamp(9.5px,.7vw,12px);letter-spacing:.24em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
-  .phase h4{font-family:var(--font-disp);font-size:clamp(16px,1.35vw,24px);color:var(--sci-navy);font-weight:700;line-height:1.2}
-  .phase .ph-range{font-family:var(--font-mono);font-size:clamp(11px,.82vw,14px);color:var(--sci-cyan);letter-spacing:.08em}
-  .phase ul{list-style:none;display:flex;flex-direction:column;gap:5px;flex:1}
-  .phase li{font-size:clamp(11.5px,.9vw,15px);color:var(--sci-muted-2);padding-left:14px;position:relative;line-height:1.4}
-  .phase li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--sci-cyan);border-radius:2px}
+/* Vote share / margin visualizations */
+.vbar-wrap{display:flex;flex-direction:column;gap:6px}
+.vbar-row{display:flex;align-items:center;gap:8px}
+.vbar-label{font-size:clamp(10px,.78vw,13px);font-weight:600;color:var(--sci-navy);min-width:120px}
+.vbar-track{flex:1;height:26px;background:var(--sci-gray);border-radius:4px;overflow:hidden;position:relative}
+.vbar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:clamp(10px,.78vw,12.5px);font-weight:700;color:#fff;letter-spacing:.04em;transition:width 1s var(--ease)}
+.vbar-val{font-family:var(--font-mono);font-size:clamp(10px,.78vw,12.5px);color:var(--sci-muted-2);min-width:80px;text-align:right}
 
-  /* ---------- Cost table ---------- */
-  .cost-row{display:grid;grid-template-columns:1fr auto auto;gap:0;border-bottom:1px solid var(--sci-hair);padding:10px 0;align-items:center}
-  .cost-row:last-child{border-bottom:none}
-  .cost-row .item{font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.4}
-  .cost-row .market{font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-muted-2);text-align:right;padding-left:18px;min-width:140px}
-  .cost-row .party{font-family:var(--font-disp);font-weight:800;font-size:clamp(13px,1.1vw,19px);color:var(--sci-success);text-align:right;padding-left:14px;min-width:80px}
-  .cost-total{background:var(--sci-navy);color:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:0}
-  .cost-total .item{font-size:clamp(12px,1vw,17px);color:#fff;font-weight:600}
-  .cost-total .market{font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-cyan);text-align:right;padding-left:18px;min-width:140px}
-  .cost-total .party{font-family:var(--font-disp);font-weight:800;font-size:clamp(16px,1.4vw,26px);color:var(--sci-success);text-align:right;padding-left:14px;min-width:80px}
+/* Impact cascade */
+.cascade{display:flex;flex-direction:column;gap:0;align-items:stretch;height:100%}
+.cstep{background:#fff;border:1px solid var(--sci-hair);border-radius:10px;padding:8px 12px;position:relative;overflow:hidden;display:flex;align-items:center;gap:10px;flex:1}
+.cstep::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.cstep.red::before{background:linear-gradient(180deg,var(--sci-danger),#f97316)}
+.cstep .cs-num{font-family:var(--font-disp);font-weight:800;font-size:clamp(17px,1.6vw,28px);line-height:1;color:var(--sci-navy);min-width:90px}
+.cstep.red .cs-num{background:linear-gradient(135deg,var(--sci-danger),#f97316);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cstep .cs-label{font-size:clamp(10px,.8vw,13px);color:var(--sci-muted-2);line-height:1.4}
+.cstep .cs-label strong{color:var(--sci-navy);font-weight:600}
+.cascade-arrow{text-align:center;color:var(--sci-cyan);font-size:14px;font-weight:700;padding:1px 0;line-height:1;flex-shrink:0}
 
-  /* ---------- Zone risk cards ---------- */
-  .zones{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1;min-height:0}
-  .zone{background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:14px 16px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:7px;height:100%}
-  .zone::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
-  .zone.high::before{background:linear-gradient(135deg,var(--sci-danger),#f97316)}
-  .zone.pilot::before{background:linear-gradient(135deg,var(--sci-cyan),var(--sci-success))}
-  .zone .z-label{font-size:clamp(9px,.66vw,11.5px);letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sci-blue)}
-  .zone.high .z-label{color:var(--sci-danger)}
-  .zone.pilot .z-label{color:var(--sci-cyan)}
-  .zone h5{font-family:var(--font-disp);font-size:clamp(13px,1.1vw,19px);color:var(--sci-navy);font-weight:700;line-height:1.2}
-  .zone .z-risk{font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);line-height:1.45;flex:1}
-  .zone .z-action{font-size:clamp(10px,.78vw,13px);color:var(--sci-blue);font-weight:600;border-top:1px solid var(--sci-hair);padding-top:7px;line-height:1.4}
-  .zone.high .z-action{color:var(--sci-danger)}
-  .zone.pilot .z-action{color:var(--sci-cyan)}
+/* Margin band chart */
+.band-chart{display:flex;flex-direction:column;gap:5px;flex:1;min-height:0}
+.band-row{display:flex;align-items:center;gap:8px}
+.band-label{font-size:clamp(9.5px,.74vw,12px);color:var(--sci-muted-2);min-width:110px;line-height:1.3}
+.band-bar{flex:1;height:20px;background:var(--sci-gray);border-radius:3px;overflow:hidden;position:relative}
+.band-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:clamp(9px,.7vw,11.5px);font-weight:700;color:#fff}
+.band-count{font-family:var(--font-mono);font-size:clamp(9.5px,.72vw,12px);color:var(--sci-navy);min-width:36px;text-align:right;font-weight:600}
+.band-note{font-size:clamp(8.5px,.65vw,10.5px);color:var(--sci-muted);min-width:100px;text-align:right;line-height:1.3}
 
-  /* ---------- Team cards ---------- */
-  .team{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;flex:1;min-height:0}
-  .team-card{background:#fff;border:1px solid var(--sci-hair);border-radius:14px;padding:22px 24px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;height:100%;box-shadow:0 8px 20px -16px rgba(15,23,42,.15)}
-  .team-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
-  .team-card .tc-role{font-size:clamp(9.5px,.7vw,12.5px);letter-spacing:.22em;text-transform:uppercase;color:var(--sci-blue);font-weight:700}
-  .team-card h4{font-family:var(--font-disp);font-size:clamp(17px,1.5vw,28px);color:var(--sci-navy);font-weight:700;line-height:1.2}
-  .team-card .tc-org{font-family:var(--font-tag);font-size:clamp(11px,.88vw,15px);color:var(--sci-cyan);font-weight:600;letter-spacing:.08em}
-  .team-card p{font-size:clamp(11.5px,.9vw,15.5px);color:var(--sci-muted-2);line-height:1.55;flex:1}
+/* 5% deletion to seats impact matrix */
+.risk-matrix{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--sci-hair);border-radius:10px;padding:8px 10px;flex-shrink:0}
+.risk-matrix .rm-head{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sci-blue)}
+.risk-row{display:grid;grid-template-columns:84px 1fr 62px;align-items:center;gap:8px}
+.risk-label{font-size:clamp(9px,.7vw,11.5px);color:var(--sci-muted-2);font-weight:600;line-height:1.3}
+.risk-bar{height:16px;background:var(--sci-gray);border-radius:3px;overflow:hidden}
+.risk-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:clamp(8.5px,.66vw,11px);font-weight:700;color:#fff;white-space:nowrap}
+.risk-val{font-family:var(--font-mono);font-size:clamp(9px,.7vw,11.5px);color:var(--sci-navy);text-align:right;font-weight:600}
 
-  /* ---------- Ask list ---------- */
-  .asks{display:flex;flex-direction:column;gap:8px;flex:1;min-height:0;overflow:hidden}
-  .ask-row{display:grid;grid-template-columns:2fr 1.2fr;gap:14px;background:#fff;border:1px solid var(--sci-hair);border-radius:12px;padding:12px 18px;position:relative;overflow:hidden;align-items:start}
-  .ask-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
-  .ask-row .ask-item{font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);font-weight:600;line-height:1.4}
-  .ask-row .ask-why{font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);line-height:1.45}
+/* Margin delta callout */
+.swing-box{background:#eef7ff;border:1px solid rgba(0,118,163,.2);border-left:3px solid var(--sci-blue);border-radius:10px;padding:10px 12px}
+.swing-box .sk{font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sci-blue);margin-bottom:4px}
+.swing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swing-grid .si{background:#fff;border:1px solid var(--sci-hair);border-radius:8px;padding:7px 8px}
+.swing-grid .sv{font-family:var(--font-disp);font-size:clamp(14px,1.2vw,20px);font-weight:800;line-height:1;color:var(--sci-navy)}
+.swing-grid .sl{font-size:clamp(8.5px,.68vw,11px);color:var(--sci-muted-2);line-height:1.35;margin-top:2px}
 
-  /* ---------- Close ---------- */
-  .close-slide{
-    background:var(--sci-navy);color:#fff;overflow:hidden;
-    display:grid;grid-template-rows:auto 1fr auto;
-  }
-  .close-slide::before,.close-slide::after{
-    content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);opacity:.55
-  }
-  .close-slide::before{width:600px;height:600px;background:var(--sci-cyan);right:-180px;top:-220px}
-  .close-slide::after{width:500px;height:500px;background:var(--sci-blue);left:-180px;bottom:-180px}
-  .close-inner{
-    position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;
-    align-items:center;align-content:center;justify-items:start;
-    gap:clamp(28px,4vw,64px);padding:clamp(16px,2.5vw,36px) 0;min-height:0;
-  }
-  .close-brand{display:flex;flex-direction:column;align-items:flex-start;gap:16px;width:100%;text-align:left}
-  .close-mark{
-    font-family:var(--font-brand);font-size:clamp(40px,4.8vw,96px);line-height:1;
-    letter-spacing:.03em;padding-left:.02em;display:inline-flex;align-items:baseline;justify-content:flex-start;gap:10px;
-  }
-  .close-stats-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin-top:6px;
-  }
-  .close-stat{
-    background:rgba(255,255,255,.04);border:1px solid rgba(0,194,232,.22);border-radius:12px;
-    padding:12px 14px;display:flex;flex-direction:column;gap:5px;backdrop-filter:blur(4px);
-    transition:transform .3s var(--ease),border-color .3s var(--ease);
-  }
-  .close-stat:hover{transform:translateY(-2px);border-color:rgba(0,194,232,.55)}
-  .close-stat .v{
-    font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.8vw,32px);line-height:1;
-    background:linear-gradient(135deg,var(--sci-cyan),#ffffff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .close-stat .l{
-    font-size:clamp(9.5px,.68vw,11.5px);letter-spacing:.18em;text-transform:uppercase;
-    color:rgba(255,255,255,.72);font-weight:600;line-height:1.35;
-  }
-  .close-mark .sci{
-    background:linear-gradient(135deg,var(--sci-blue) 0%,var(--sci-cyan) 100%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .close-mark .enc{color:#fff;-webkit-text-fill-color:#fff}
-  .close-mark .ai{
-    font-family:var(--font-brand);font-size:.24em;letter-spacing:.1em;
-    color:#fff;-webkit-text-fill-color:#fff;
-    background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));
-    padding:7px 14px;border-radius:999px;line-height:1.2;align-self:center;
-  }
-  .close-rule{
-    width:100%;max-width:420px;height:2px;
-    background:linear-gradient(90deg,var(--sci-cyan) 0%,var(--sci-blue) 55%,rgba(255,255,255,.85) 100%);
-  }
-  .close-tag{
-    font-family:var(--font-tag);
-    font-size:clamp(11px,.88vw,14px);font-weight:500;letter-spacing:.18em;text-transform:uppercase;
-    color:rgba(255,255,255,.78);line-height:1.5;text-align:left;
-  }
-  .close-headline{display:flex;flex-direction:column;gap:14px}
-  .close-slide .k{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
-  .close-slide .h1{font-family:var(--font-disp);font-weight:800;font-size:clamp(28px,3.2vw,70px);line-height:1.02;color:#fff;letter-spacing:-.02em;max-width:22ch}
-  .close-slide .h1 span{color:var(--sci-cyan);font-style:italic}
-  .close-slide .body-text{font-family:var(--font-disp);font-style:italic;font-size:clamp(13px,1.1vw,20px);line-height:1.55;max-width:52ch;color:rgba(255,255,255,.85)}
-  .close-slide .next-steps{font-family:var(--font-mono);font-size:clamp(11px,.78vw,14px);letter-spacing:.06em;color:rgba(255,255,255,.9);line-height:2}
-  .close-slide .next-steps span{color:var(--sci-cyan);font-weight:700;margin-right:6px}
+/* Close */
+.close-slide{background:var(--sci-navy);color:#fff;overflow:hidden}
+.close-slide::before,.close-slide::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(70px);opacity:.5}
+.close-slide::before{width:500px;height:500px;background:var(--sci-cyan);right:-160px;top:-180px}
+.close-slide::after{width:420px;height:420px;background:var(--sci-blue);left:-140px;bottom:-150px}
+.close-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(20px,3vw,50px);padding:4px 0;min-height:0;height:100%}
+.close-mark{font-family:var(--font-brand);font-size:clamp(36px,4.2vw,80px);line-height:1;letter-spacing:.03em;display:inline-flex;align-items:baseline;gap:8px}
+.close-mark .sci{background:linear-gradient(135deg,var(--sci-blue),var(--sci-cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.close-mark .enc{color:#fff;-webkit-text-fill-color:#fff}
+.close-mark .ai{font-family:var(--font-brand);font-size:.22em;color:#fff;-webkit-text-fill-color:#fff;background:var(--grad);padding:6px 12px;border-radius:999px;line-height:1.2;align-self:center}
+.close-rule{width:100%;max-width:380px;height:2px;background:linear-gradient(90deg,var(--sci-cyan),var(--sci-blue) 55%,rgba(255,255,255,.8))}
+.cstat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;margin-top:4px}
+.cstat{background:rgba(255,255,255,.04);border:1px solid rgba(0,194,232,.2);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:3px}
+.cstat .v{font-family:var(--font-disp);font-weight:800;font-size:clamp(15px,1.5vw,26px);line-height:1;background:linear-gradient(135deg,var(--sci-cyan),#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cstat .l{font-size:clamp(8px,.6vw,10px);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);font-weight:600;line-height:1.3}
+.close-lhs{display:flex;flex-direction:column;gap:10px}
+.close-rhs{display:flex;flex-direction:column;gap:10px}
+.close-rhs .k{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--sci-cyan);font-weight:700}
+.close-rhs .h1{font-family:var(--font-disp);font-weight:800;font-size:clamp(22px,2.6vw,48px);line-height:1.02;color:#fff;letter-spacing:-.02em}
+.close-rhs .h1 span{color:var(--sci-cyan);font-style:italic}
+.close-rhs .bt{font-family:var(--font-disp);font-style:italic;font-size:clamp(11.5px,.9vw,15px);line-height:1.5;color:rgba(255,255,255,.82)}
+.close-rhs .ns{font-family:var(--font-mono);font-size:clamp(9.5px,.75vw,12.5px);letter-spacing:.05em;color:rgba(255,255,255,.88);line-height:1.85}
+.close-rhs .ns span{color:var(--sci-cyan);font-weight:700;margin-right:5px}
+.close-rhs .contact{font-size:11px;color:rgba(255,255,255,.82);display:flex;flex-wrap:wrap;gap:3px 12px;margin-top:2px}
 
-  /* ---------- kbd hint ---------- */
-  .kbd{
-    position:fixed;top:18px;right:18px;z-index:40;
-    background:rgba(26,39,68,.85);color:rgba(255,255,255,.8);
-    padding:8px 12px;border-radius:999px;font-family:var(--font-mono);font-size:11px;
-    backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08);
-  }
-  .kbd kbd{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:1px 6px;border-radius:4px;font-family:var(--font-mono);font-size:10px;color:#fff;margin:0 2px}
-
-  /* ---------- Fill available vertical space ---------- */
-  .pillars,.timeline,.team,.zones,.why{flex:1 1 0%;min-height:0;}
-  .body > .sowhat{margin-top:auto}
-
-  /* ---------- Confidential badge ---------- */
-  .conf-badge{
-    display:inline-flex;align-items:center;gap:6px;
-    font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
-    color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;
-    position:relative;z-index:2;
-  }
-
-  @media(max-width:1100px){
-    .pillars,.zones{grid-template-columns:1fr 1fr}
-    .timeline,.team,.why{grid-template-columns:1fr 1fr}
-    .stat-bar{grid-template-columns:repeat(2,1fr)}
-  }
-  @media(max-width:900px){
-    .close-inner{grid-template-columns:1fr;text-align:left;align-items:start;justify-items:stretch;gap:clamp(20px,4vw,36px)}
-    .close-stats-grid{grid-template-columns:repeat(3,1fr)}
-    .close-mark{font-size:clamp(38px,12vw,68px)}
-  }
+/* Nav */
+.nav{position:fixed;z-index:50;bottom:12px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(26,39,68,.93);backdrop-filter:blur(14px);border-radius:999px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.85);font-size:12px}
+.nav button{width:26px;height:26px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.nav button:hover{background:var(--sci-cyan);color:var(--sci-navy);transform:translateY(-1px)}
+.nav .counter{font-family:var(--font-mono);font-size:11px;min-width:50px;text-align:center;letter-spacing:.07em}
+.nav .dot{width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.22);cursor:pointer;transition:background .3s}
+.nav .dot.on{background:var(--sci-cyan)}
+.kbd{position:fixed;top:12px;right:12px;z-index:40;background:rgba(26,39,68,.85);color:rgba(255,255,255,.72);padding:5px 9px;border-radius:999px;font-family:var(--font-mono);font-size:9.5px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08)}
+.kbd kbd{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:1px 4px;border-radius:3px;font-size:9px;color:#fff;margin:0 1px}
 </style>
 </head>
 <body>
-
 <div class="kbd">Use <kbd>←</kbd> <kbd>→</kbd> to navigate</div>
-
 <div id="deck">
 
-<!-- SLIDE 1: COVER ===================================================== -->
+<!-- ═══ SLIDE 1: COVER ═══ -->
 <section class="slide dark cover is-active" data-section="Cover">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>Cover</span>
     <span>AP · SIR 2026 · Confidential</span>
+    <span>Cover</span>
   </div>
-  <div class="body" style="gap:0;flex:1;min-height:0;height:100%">
-    <div style="display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr;gap:clamp(28px,2.8vw,56px);align-items:stretch;flex:1;min-height:0;height:100%">
-      <div style="display:flex;flex-direction:column;justify-content:space-between;gap:clamp(12px,1vw,18px);padding:clamp(8px,.8vw,16px) 0;height:100%">
-        <div style="display:flex;flex-direction:column;gap:4px">
-          <div class="kicker">Confidential Proposal · YSRCP Leadership Only</div>
-          <div class="conf-badge">Restricted · Party Leadership Only</div>
+  <div class="body" style="flex:1;min-height:0;gap:0">
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(18px,2.2vw,40px);height:100%;align-items:stretch">
+      <div style="display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:6px 0;height:100%">
+        <div style="display:flex;flex-direction:column;gap:4px;position:relative;z-index:2">
+          <div class="kicker">Confidential Proposal — YSRCP Leadership Only</div>
+          <div class="cbadge">For: Sri Gadikota Srikanth Reddy · State General Secretary, YSRCP</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:clamp(8px,.8vw,14px)">
+        <div style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:2">
           <div class="wordmark"><span class="sci">Sci</span><span class="enc">Encephalon</span><span class="ai">AI</span></div>
-          <div class="capstmt">Andhra Pradesh <span>Voter Protection</span> Mission</div>
-          <div style="font-family:var(--font-disp);font-style:italic;color:rgba(255,255,255,.85);font-size:clamp(14px,1.15vw,20px);line-height:1.35;margin-top:2px">A Parallel Special Intensive Revision Platform</div>
-          <div class="tagline">Prepared for Sri Gadikota Srikanth Reddy · State General Secretary, YSRCP</div>
+          <div style="font-family:var(--font-disp);font-style:italic;font-weight:600;font-size:clamp(13px,1.35vw,24px);color:#fff;line-height:1.2">Andhra Pradesh <span style="color:var(--sci-cyan)">Voter Protection</span> Mission</div>
+          <div style="font-family:var(--font-disp);font-style:italic;color:rgba(255,255,255,.78);font-size:clamp(11.5px,.92vw,15px);line-height:1.3">A Parallel Special Intensive Revision Platform</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:clamp(10px,.9vw,16px)">
-          <div class="hero-stats-grid">
-            <div class="hero-stat"><div class="v">4.08 Cr</div><div class="l">AP voters at risk</div></div>
-            <div class="hero-stat"><div class="v">90 Days</div><div class="l">Full platform delivery</div></div>
-            <div class="hero-stat"><div class="v">₹0</div><div class="l">Cost to YSRCP</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:2">
+          <div class="hero-stat-grid">
+            <div class="hs"><div class="v">4.08 Cr</div><div class="l">AP Voters at Risk</div></div>
+            <div class="hs"><div class="v">90 Days</div><div class="l">Full Delivery</div></div>
+            <div class="hs"><div class="v">Day 30</div><div class="l">Pilot Review &amp; Go/No-Go</div></div>
           </div>
           <div class="cover-accent"></div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;position:relative;z-index:2">
-            <span class="hero-chip">46,165 Booths</span>
-            <span class="hero-chip">26 Districts</span>
-            <span class="hero-chip">175 Constituencies</span>
-            <span class="hero-chip">AWS Mumbai</span>
-            <span class="hero-chip">Telugu WhatsApp Bot</span>
+          <div class="chip-row">
+            <span class="chip">46,165 Booths</span><span class="chip">26 Districts</span><span class="chip">175 Constituencies</span><span class="chip">AWS Mumbai</span><span class="chip">Telugu Bot</span>
           </div>
         </div>
       </div>
-      <div class="right" style="justify-content:space-between;gap:clamp(10px,.9vw,16px);padding:clamp(8px,.8vw,16px) 0;height:100%">
-        <div class="meta-card">
-          <span class="k">The Threat</span>
-          <strong>Bihar lost 47 lakh voters in 90 days.</strong> UP lost 2.04 crore. West Bengal lost 91 lakh. AP's SIR 2026 could erase 24–53 lakh valid voters before a single ballot is cast.
-        </div>
-        <div class="meta-card">
-          <span class="k">The Platform</span>
-          <strong>Shadow enumeration + real-time reconciliation.</strong> 46,165 Voter Protection Volunteers. ML-powered Form 7 abuse detection. Automatic Form 6 filing pipeline within the claims window.
-        </div>
-        <div class="meta-card">
-          <span class="k">The Team</span>
-          <strong>SciEncephalon AI · KLM Group · Nanda Kishore Tadepally.</strong> Technology, ground reach, and program delivery — committing personal time and resources at zero cost to the party.
-        </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:6px 0;height:100%;position:relative;z-index:2">
+        <div class="meta-card"><span class="k">The Threat</span><strong>Bihar lost 47 lakh voters in 90 days.</strong> UP lost 2.04 crore. WB lost 91 lakh. At Bihar-equivalent deletions, AP loses 24+ lakh voters — enough to swing 50 seats before a ballot is cast.</div>
+        <div class="meta-card"><span class="k">The Platform</span><strong>Shadow enumeration + real-time reconciliation.</strong> 46,165 Voter Protection Volunteers. ML-powered Form 7 abuse detection. Automatic Form 6 filing pipeline within the statutory window.</div>
+        <div class="meta-card"><span class="k">The Team</span><strong>SciEncephalon AI · KLM Group · Nanda Kishore Tadepally.</strong> Technology, ground reach, and program delivery — three principals committing personal time and engineering resources to this mission.</div>
       </div>
     </div>
   </div>
-  <div class="chrome-bottom">
-    <span>Restricted · YSRCP Leadership Only · May 2026</span>
-    <span class="progress"><i></i></span>
-    <span class="counter-text">01 / 13</span>
-  </div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">01 / 14</span></div>
 </section>
 
-<!-- SLIDE 2: EXECUTIVE SUMMARY ======================================== -->
+<!-- ═══ SLIDE 2: EXECUTIVE SUMMARY + IMPACT VISUAL ═══ -->
 <section class="slide" data-section="01 · Executive Summary">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>01 · Executive Summary</span>
-    <span>02 / 13</span>
+    <span>01 · Executive Summary</span><span>02 / 14</span>
   </div>
-  <div class="body">
+  <div class="body" style="flex:1;min-height:0">
     <div class="kicker">Executive Summary</div>
-    <h2 class="headline">The votes at risk can decide 50 or more seats. The window to act is now.</h2>
-    <p class="deck-text">ECI's Special Intensive Revision 2026 is underway. Its track record in Bihar, UP, and West Bengal is a documented warning. YSRCP can run a parallel system — or discover the damage after the roll is final.</p>
+    <h2 class="headline">Deletions can decide 50+ seats. The window to act is now.</h2>
 
-    <div class="stat-bar">
-      <div class="sb danger">
-        <span class="sk">AP Baseline</span>
-        <div class="sv">4,08,07,256</div>
-        <div class="sl">Total voters on the January 2024 final roll. Source: AP CEO Office, Business Standard.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-height:0">
+      <!-- LEFT: context cards -->
+      <div style="display:flex;flex-direction:column;gap:8px;height:100%">
+        <div class="qcard" style="flex:1">
+          <div class="qk">The Mechanism</div>
+          <h4>How Silent Deletion Works</h4>
+          <p>BLOs visit 46,165 booths. Absent households — migrants, fishermen, seasonal workers — get marked "not traceable." Form 7 bulk objections are filed against valid voters. Names vanish in the draft roll before anyone notices.</p>
+        </div>
+        <div class="qcard dk" style="flex:1">
+          <div class="qk">The Statutory Window</div>
+          <h4>Claims &amp; Objections: The Only Remedy</h4>
+          <p>After the draft roll publishes, a statutory window allows Form 6 filings and Form 7 contests. Miss that window and the deletion is permanent. The platform exists to catch every case in time.</p>
+        </div>
+        <div class="qcard dk" style="flex:1">
+          <div class="qk">Prior AP Evidence — ECI Complaint Aug 28, 2023</div>
+          <h4>40,000 Gone in Vizag East. 23,000 in Vijayawada Central.</h4>
+          <p>These deletions happened before SIR 2026. SIR is a larger, nationwide exercise with broader scope and ECI institutional backing. The 2026 exposure is materially higher.</p>
+        </div>
       </div>
-      <div class="sb danger">
-        <span class="sk">Conservative Risk</span>
-        <div class="sv">24.3 lakh</div>
-        <div class="sl">Voters potentially lost at Bihar-equivalent 5.95% deletion rate.</div>
-      </div>
-      <div class="sb danger">
-        <span class="sk">Worst Case</span>
-        <div class="sv">53.0 lakh</div>
-        <div class="sl">Voters potentially lost at UP-equivalent 13% deletion rate.</div>
-      </div>
-      <div class="sb">
-        <span class="sk">Margin Exposure</span>
-        <div class="sv">50–110</div>
-        <div class="sl">AP constituencies where outcome can be altered even at the conservative scenario.</div>
+      <!-- RIGHT: deletion impact cascade -->
+      <div style="display:flex;flex-direction:column;gap:6px;height:100%">
+        <div style="font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sci-blue);flex-shrink:0">5% Deletion Scenario — Impact Cascade</div>
+        <div class="cascade" style="flex:1;min-height:0">
+          <div class="cstep">
+            <div class="cs-num">4,08,07,256</div>
+            <div class="cs-label"><strong>AP Registered Voters</strong><br>Final roll · Jan 22, 2024 · AP CEO Office</div>
+          </div>
+          <div class="cascade-arrow">↓ 5% SIR Deletion</div>
+          <div class="cstep red">
+            <div class="cs-num">20.4 lakh</div>
+            <div class="cs-label"><strong>Voters Removed from Roll</strong><br>Bihar-equivalent rate · before a ballot is cast</div>
+          </div>
+          <div class="cascade-arrow">↓ distributed across</div>
+          <div class="cstep red">
+            <div class="cs-num">~11,660</div>
+            <div class="cs-label"><strong>Voters Per Constituency (avg)</strong><br>20.4 lakh ÷ 175 constituencies</div>
+          </div>
+          <div class="cascade-arrow">↓ vs. 2024 winning margins</div>
+          <div class="cstep red">
+            <div class="cs-num">50–60</div>
+            <div class="cs-label"><strong>Seats Where Deletion &gt; Margin</strong><br>Even at the most conservative scenario</div>
+          </div>
+          <div class="cascade-arrow">↓ statewide vote pool shift</div>
+          <div class="cstep red">
+            <div class="cs-num">~75%</div>
+            <div class="cs-label"><strong>Of the 2024 Statewide Vote Gap</strong><br>20.4 lakh ≈ 75% of the ~26.5 lakh statewide deficit</div>
+          </div>
+        </div>
+        <div class="risk-matrix">
+          <div class="rm-head">Worst Case Visual: 5% Votes Deleted to Seat Impact</div>
+          <div class="risk-row">
+            <div class="risk-label">Votes Removed</div>
+            <div class="risk-bar"><div class="risk-fill" style="width:100%;background:linear-gradient(90deg,var(--sci-danger),#f97316)">20.4 lakh</div></div>
+            <div class="risk-val">5.0%</div>
+          </div>
+          <div class="risk-row">
+            <div class="risk-label">Seats Exposed</div>
+            <div class="risk-bar"><div class="risk-fill" style="width:34%;background:linear-gradient(90deg,#0284c7,#0ea5e9)">50 to 60 seats</div></div>
+            <div class="risk-val">29 to 34%</div>
+          </div>
+          <div style="font-size:8.5px;color:var(--sci-muted);line-height:1.35">Seat exposure shown as share of 175 constituencies where deletion volume can exceed historical margin bands.</div>
+        </div>
       </div>
     </div>
 
-    <div class="why" style="flex:1;min-height:0;margin-top:0">
-      <div class="why-card">
-        <div class="pk">The Mechanism</div>
-        <h4>How Silent Deletion Works</h4>
-        <p>BLOs visit 46,165 booths. Absent households — migrants, fishermen, seasonal workers — get marked as "not traceable." Form 7 bulk objections are filed against valid voters. Names disappear in the draft roll before anyone notices.</p>
-      </div>
-      <div class="why-card dark">
-        <div class="pk">The Window</div>
-        <h4>Claims &amp; Objections: The Only Legal Remedy</h4>
-        <p>After the draft roll publishes, there is a statutory window to file Form 6 (enroll) and contest Form 7 objections. Miss that window and the deletion is permanent. The platform exists to catch every case in time.</p>
-      </div>
-      <div class="why-card dark">
-        <div class="pk">YSRCP's Structural Exposure</div>
-        <h4>Prior Deletions Already Documented</h4>
-        <p>Formal complaints lodged with ECI on August 28, 2023 documented <strong>40,000 voters deleted in Visakhapatnam East</strong> and <strong>23,000 in Vijayawada Central</strong> before the 2024 election. SIR 2026 is a larger exercise.</p>
-      </div>
-      <div class="why-card">
-        <div class="pk">The Offer</div>
-        <h4>Zero Cost. Ninety Days. Pilot First.</h4>
-        <p>Pilot in Rayachoti and Annamayya district — Sri Gadikota Srikanth Reddy's home turf — within 30 days. Statewide by day 90. No vendor engagement. No party funding required. No lock-in.</p>
-      </div>
-    </div>
-
-    <div class="sowhat danger"><b>Bottom line:</b>YSRCP cannot stop SIR. YSRCP can build the alarm system that catches every wrongful deletion before it becomes permanent. That is what we are offering to build, at zero cost.</div>
+    <div class="sw danger"><b>Bottom line:</b>YSRCP cannot stop SIR — but can build the alarm system that catches every wrongful deletion before it becomes permanent. That is what we are offering to build.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">02 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">02 / 14</span></div>
 </section>
 
-<!-- SLIDE 3: SIR TRACK RECORD ======================================== -->
+<!-- ═══ SLIDE 3: SIR TRACK RECORD ═══ -->
 <section class="slide" data-section="02 · SIR Track Record">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>02 · SIR Track Record</span>
-    <span>03 / 13</span>
+    <span>02 · SIR Track Record</span><span>03 / 14</span>
   </div>
-  <div class="body">
+  <div class="body" style="flex:1;min-height:0">
     <div class="kicker">SIR Deletion Track Record — Verified Numbers</div>
-    <h2 class="headline">Three states. Tens of millions of voters. The pattern is documented.</h2>
-    <p class="deck-text">Bihar, Uttar Pradesh, and West Bengal are not edge cases. They are the baseline. Andhra Pradesh enters SIR 2026 with the same mechanics and no parallel protection system.</p>
+    <h2 class="headline">Three states. The pattern is documented and consistent.</h2>
 
-    <table class="data-table" style="flex:0 0 auto">
+    <table class="dtable">
       <thead>
-        <tr>
-          <th>State</th>
-          <th>SIR Period</th>
-          <th>Pre-SIR Voters</th>
-          <th>Net Deletion</th>
-          <th>Deletion Rate</th>
-          <th>Source</th>
-        </tr>
+        <tr><th>State</th><th>Period</th><th>Pre-SIR Voters</th><th>Net Deletion</th><th>Rate</th><th>Source</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>Bihar</strong></td>
-          <td>Jun – Sep 2025</td>
-          <td>7.89 crore</td>
-          <td><span class="warn big-num">47 lakh</span></td>
-          <td><span class="warn">5.95%</span></td>
-          <td class="source">ECI · Wikipedia SIR tracking</td>
-        </tr>
-        <tr>
-          <td><strong>Uttar Pradesh</strong></td>
-          <td>Oct 2025 – Apr 2026</td>
-          <td>~15.4 crore</td>
-          <td><span class="warn big-num">~2.04 crore</span></td>
-          <td><span class="warn">~13%</span></td>
-          <td class="source">ECI · The Wire · India.com</td>
-        </tr>
-        <tr>
-          <td><strong>West Bengal</strong></td>
-          <td>Oct 2025 – ongoing</td>
-          <td>~7.6 crore</td>
-          <td><span class="warn big-num">~91 lakh</span></td>
-          <td><span class="warn">~12%</span></td>
-          <td class="source">Sabrang India · ECI press notes</td>
-        </tr>
+        <tr><td><strong>Bihar</strong></td><td>Jun–Sep 2025</td><td>7.89 crore</td><td><span class="warn bnum">47 lakh</span></td><td><span class="warn">5.95%</span></td><td class="src">ECI · Wikipedia SIR</td></tr>
+        <tr><td><strong>Uttar Pradesh</strong></td><td>Oct 2025–Apr 2026</td><td>~15.4 crore</td><td><span class="warn bnum">~2.04 crore</span></td><td><span class="warn">~13%</span></td><td class="src">ECI · The Wire</td></tr>
+        <tr><td><strong>West Bengal</strong></td><td>Oct 2025–ongoing</td><td>~7.6 crore</td><td><span class="warn bnum">~91 lakh</span></td><td><span class="warn">~12%</span></td><td class="src">Sabrang · ECI</td></tr>
       </tbody>
     </table>
 
-    <div class="kicker" style="margin-top:4px">Applying Observed Rates to Andhra Pradesh (4,08,07,256 voters)</div>
-    <table class="data-table" style="flex:0 0 auto">
+    <div class="kicker" style="margin-top:4px">Applied to Andhra Pradesh — 4,08,07,256 Voters</div>
+    <table class="dtable">
       <thead>
-        <tr>
-          <th>Scenario</th>
-          <th>Deletion Rate Applied</th>
-          <th>AP Voters Lost (est.)</th>
-          <th>Constituencies Likely Affected</th>
-        </tr>
+        <tr><th>Scenario</th><th>Rate</th><th>AP Voters Lost</th><th>Constituencies Affected</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Bihar-equivalent <em style="color:var(--sci-muted-2);font-size:12px">(conservative)</em></td>
-          <td>5.95%</td>
-          <td><span class="big-num">24,28,031</span></td>
-          <td>50 to 60 seats at margin</td>
-        </tr>
-        <tr>
-          <td>West Bengal-equivalent <em style="color:var(--sci-muted-2);font-size:12px">(base case)</em></td>
-          <td>12%</td>
-          <td><span class="big-num">48,96,871</span></td>
-          <td>80 to 100 seats at margin</td>
-        </tr>
-        <tr>
-          <td>UP-equivalent <em style="color:var(--sci-muted-2);font-size:12px">(adverse)</em></td>
-          <td>13%</td>
-          <td><span class="big-num">53,04,943</span></td>
-          <td>90 to 110 seats at margin</td>
-        </tr>
+        <tr><td>Bihar-equivalent <em style="color:var(--sci-muted-2);font-size:10px">(conservative)</em></td><td>5.95%</td><td><span class="bnum">24,28,031</span></td><td>50–60 seats at margin</td></tr>
+        <tr><td>West Bengal-equivalent <em style="color:var(--sci-muted-2);font-size:10px">(base case)</em></td><td>12%</td><td><span class="bnum">48,96,871</span></td><td>80–100 seats at margin</td></tr>
+        <tr><td>UP-equivalent <em style="color:var(--sci-muted-2);font-size:10px">(adverse)</em></td><td>13%</td><td><span class="bnum">53,04,943</span></td><td>90–110 seats at margin</td></tr>
       </tbody>
     </table>
 
-    <div class="sowhat danger"><b>Context:</b>the 2024 AP election saw 81.86% turnout. Margins below 10,000 votes decided dozens of seats. At Bihar-equivalent deletions alone, the altered vote pool is large enough to swing a majority of the 175 constituencies — before a single ballot is cast.</div>
+    <div class="sw danger"><b>Context:</b>AP's 2024 election saw 81.86% turnout with dozens of seats decided by tight margins. Even at the conservative scenario, the altered vote pool is large enough to determine a majority of the 175 constituencies before a ballot is cast.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">03 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">03 / 14</span></div>
 </section>
 
-<!-- SLIDE 4: AP BASELINE ============================================= -->
-<section class="slide" data-section="03 · AP Baseline">
+<!-- ═══ SLIDE 4: 2024 MARGIN ANALYSIS ═══ -->
+<section class="slide" data-section="03 · 2024 Margin Analysis">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>03 · AP Baseline</span>
-    <span>04 / 13</span>
+    <span>03 · 2024 Margin Analysis</span><span>04 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">Andhra Pradesh Electoral Baseline — January 2024 Final Roll</div>
-    <h2 class="headline">Every number that matters for the platform's scope and scale.</h2>
-    <p class="deck-text">Source: Office of the Chief Electoral Officer, Andhra Pradesh; Business Standard, January 22, 2024. These are the authoritative figures the platform protects.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">2024 AP Election Results &amp; Next Election Vulnerability</div>
+    <h2 class="headline">A 20.4-lakh deletion erases 75% of the statewide 2024 deficit — before voting begins.</h2>
 
-    <div class="stat-bar" style="grid-template-columns:repeat(4,1fr)">
-      <div class="sb">
-        <span class="sk">Total Voters</span>
-        <div class="sv">4,08,07,256</div>
-        <div class="sl">As of the final January 22, 2024 electoral roll</div>
-      </div>
-      <div class="sb">
-        <span class="sk">Male</span>
-        <div class="sv">2,00,74,322</div>
-        <div class="sl">49.2% of the total electorate</div>
-      </div>
-      <div class="sb">
-        <span class="sk">Female</span>
-        <div class="sv">2,07,29,452</div>
-        <div class="sl">50.8% of the total electorate</div>
-      </div>
-      <div class="sb">
-        <span class="sk">Third Gender</span>
-        <div class="sv">3,482</div>
-        <div class="sl">Third-gender registered voters</div>
-      </div>
-    </div>
-
-    <div class="grid c4" style="flex:0 0 auto">
-      <div class="card">
-        <div class="k">Service Electors</div>
-        <div style="font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.7vw,30px);color:var(--sci-navy);line-height:1">67,434</div>
-        <div style="font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);margin-top:4px;line-height:1.4">Defense and central government service voters — disproportionately absent during BLO visits</div>
-      </div>
-      <div class="card">
-        <div class="k">Polling Stations</div>
-        <div style="font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.7vw,30px);color:var(--sci-navy);line-height:1">46,165</div>
-        <div style="font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);margin-top:4px;line-height:1.4">One Voter Protection Volunteer per booth. Full coverage requires 46,165 VPVs.</div>
-      </div>
-      <div class="card">
-        <div class="k">Assembly Constituencies</div>
-        <div style="font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.7vw,30px);color:var(--sci-navy);line-height:1">175</div>
-        <div style="font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);margin-top:4px;line-height:1.4">Full statewide coverage target by day 90. Constituency-level deletion heatmaps for every in-charge.</div>
-      </div>
-      <div class="card">
-        <div class="k">Districts</div>
-        <div style="font-family:var(--font-disp);font-weight:800;font-size:clamp(20px,1.7vw,30px);color:var(--sci-navy);line-height:1">26</div>
-        <div style="font-size:clamp(11px,.88vw,15px);color:var(--sci-muted-2);margin-top:4px;line-height:1.4">Post-2022 reorganisation. Each district needs one technical liaison — the only resource ask from the party.</div>
-      </div>
-    </div>
-
-    <div class="grid c2" style="flex:0 0 auto">
-      <div class="card">
-        <div class="k">Prior Documented Deletions — Pre-SIR</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          Formal ECI complaints filed <strong>August 28, 2023</strong> documented: <strong style="color:var(--sci-danger)">40,000 voters deleted</strong> in Visakhapatnam East · <strong style="color:var(--sci-danger)">23,000 voters deleted</strong> in Vijayawada Central · Bulk deletions in Parchur, Tadikonda, and Uravakonda.
-          <div style="margin-top:6px;font-size:11px;color:var(--sci-muted);letter-spacing:.12em;text-transform:uppercase">Source: Wikipedia, 2024 AP Legislative Assembly Election</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-height:0">
+      <!-- LEFT: vote share bars -->
+      <div style="display:flex;flex-direction:column;gap:10px;height:100%">
+        <div style="font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sci-blue)">2024 AP Election — Statewide Vote Share</div>
+        <div class="vbar-wrap" style="flex:1">
+          <div class="vbar-row">
+            <div class="vbar-label">TDP+JSP+BJP</div>
+            <div class="vbar-track"><div class="vbar-fill" style="width:47.8%;background:linear-gradient(90deg,#0284c7,#0ea5e9)">47.8%</div></div>
+            <div class="vbar-val">~1.60 Cr votes</div>
+          </div>
+          <div class="vbar-row">
+            <div class="vbar-label">YSRCP</div>
+            <div class="vbar-track"><div class="vbar-fill" style="width:39.95%;background:linear-gradient(90deg,var(--sci-danger),#f97316)">39.95%</div></div>
+            <div class="vbar-val">~1.33 Cr votes</div>
+          </div>
+          <div class="vbar-row">
+            <div class="vbar-label">Others</div>
+            <div class="vbar-track"><div class="vbar-fill" style="width:12.25%;background:var(--sci-muted)">12.3%</div></div>
+            <div class="vbar-val">~0.41 Cr votes</div>
+          </div>
+        </div>
+        <div style="background:var(--sci-gray);border-radius:10px;padding:10px 12px;border-left:3px solid var(--sci-danger)">
+          <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sci-danger);margin-bottom:4px">Statewide Vote Gap — 2024</div>
+          <div style="font-family:var(--font-disp);font-weight:800;font-size:clamp(18px,1.7vw,30px);color:var(--sci-navy);line-height:1">~26.5 lakh votes</div>
+          <div style="font-size:clamp(10px,.78vw,13px);color:var(--sci-muted-2);margin-top:3px;line-height:1.4">TDP alliance lead over YSRCP across all 175 constituencies. Turnout: 81.86% of 4.08 crore = ~3.34 crore votes cast. <span style="font-size:9px;color:var(--sci-muted);letter-spacing:.1em;text-transform:uppercase">Source: ECI 2024 AP Results</span></div>
+        </div>
+        <div style="background:#fff3cd;border-radius:10px;padding:10px 12px;border-left:3px solid var(--sci-alert)">
+          <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#92400e;margin-bottom:4px">SIR Deletion vs. Vote Gap</div>
+          <div style="font-size:clamp(11px,.88vw,14.5px);color:#78350f;line-height:1.45">At 5% deletion: <strong>20.4 lakh voters removed</strong> = <strong style="color:var(--sci-danger)">77% of the 2024 statewide gap.</strong><br>At 12% (WB-rate): <strong>49 lakh voters removed</strong> = <strong style="color:var(--sci-danger)">185% of the gap — the election is pre-determined.</strong></div>
+        </div>
+        <div class="swing-box">
+          <div class="sk">Last Election Margin and Next-Election Impact</div>
+          <div class="swing-grid">
+            <div class="si">
+              <div class="sv">7.85 pp</div>
+              <div class="sl">2024 vote-share gap (47.80% vs 39.95%)</div>
+            </div>
+            <div class="si">
+              <div class="sv">6.11 pp</div>
+              <div class="sl">extra swing if 20.4 lakh deletions skew away from YSRCP in 2029 turnout pool</div>
+            </div>
+            <div class="si">
+              <div class="sv">1.74 pp</div>
+              <div class="sl">residual gap left to close through campaign and alliance strategy</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="k">2024 Election Context</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          Andhra Pradesh recorded <strong>81.86% voter turnout</strong> in 2024 — one of the highest in recent state history. Dozens of constituencies were decided by margins below 10,000 votes. At any SIR deletion scenario, the vote pool shift dwarfs these margins many times over.
+      <!-- RIGHT: constituency margin bands -->
+      <div style="display:flex;flex-direction:column;gap:8px;height:100%">
+        <div style="font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sci-blue)">Constituency Margin Bands — AP 2024 (175 Seats)</div>
+        <div class="band-chart">
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--sci-muted);margin-bottom:2px">Seats won by margin</div>
+          <div class="band-row">
+            <div class="band-label" style="color:var(--sci-danger);font-weight:700">&lt; 5,000 votes</div>
+            <div class="band-bar"><div class="band-fill" style="width:5%;background:var(--sci-danger)"></div></div>
+            <div class="band-count" style="color:var(--sci-danger)">~8</div>
+            <div class="band-note" style="color:var(--sci-danger);font-weight:600">Flipped by &lt;1% deletion</div>
+          </div>
+          <div class="band-row">
+            <div class="band-label" style="color:#d97706;font-weight:700">5,000 – 15,000</div>
+            <div class="band-bar"><div class="band-fill" style="width:13%;background:#f59e0b"></div></div>
+            <div class="band-count" style="color:#d97706">~22</div>
+            <div class="band-note" style="color:#d97706;font-weight:600">At risk at 1–2% deletion</div>
+          </div>
+          <div class="band-row">
+            <div class="band-label">15,000 – 30,000</div>
+            <div class="band-bar"><div class="band-fill" style="width:24%;background:var(--sci-blue)">~42 seats</div></div>
+            <div class="band-count">~42</div>
+            <div class="band-note">At risk at 3–5% deletion</div>
+          </div>
+          <div class="band-row">
+            <div class="band-label">30,000 – 60,000</div>
+            <div class="band-bar"><div class="band-fill" style="width:34%;background:var(--sci-blue)">~59 seats</div></div>
+            <div class="band-count">~59</div>
+            <div class="band-note">At risk at 7–12% deletion</div>
+          </div>
+          <div class="band-row">
+            <div class="band-label">&gt; 60,000 votes</div>
+            <div class="band-bar"><div class="band-fill" style="width:25%;background:var(--sci-muted)">~44 seats</div></div>
+            <div class="band-count">~44</div>
+            <div class="band-note">Safe at any SIR rate</div>
+          </div>
         </div>
+        <div style="background:var(--sci-navy);border-radius:10px;padding:10px 12px;margin-top:auto">
+          <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sci-cyan);margin-bottom:4px">What Next Elections Require</div>
+          <div style="font-size:clamp(10.5px,.82vw,13.5px);color:rgba(255,255,255,.82);line-height:1.5">YSRCP must flip ~82 seats to regain majority. Every constituency where YSRCP voters are deleted in SIR makes that recovery harder — independently of the party's 2029 vote performance.</div>
+        </div>
+        <div style="font-size:8.5px;color:var(--sci-muted);line-height:1.4;padding:0 2px">* Constituency margin bands are illustrative based on published 2024 AP election outcomes and ECI result patterns. Statewide vote share figures are from ECI 2024 AP General Election results.</div>
       </div>
     </div>
 
-    <div class="sowhat"><b>Scale context:</b>4.08 crore records, 46,165 booths, 26 districts, 175 constituencies. The platform must operate at national-census ingestion scale, in real time, with Telugu-language support throughout.</div>
+    <div class="sw danger"><b>The math:</b>SIR 2026 does not just threaten the 2026 roll — it pre-determines the 2029 election. If YSRCP voters are disproportionately removed, the party cannot recover the margin even with a better campaign.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">04 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">04 / 14</span></div>
 </section>
 
-<!-- SLIDE 5: THE PROPOSAL ============================================ -->
-<section class="slide" data-section="04 · The Proposal">
+<!-- ═══ SLIDE 5: AP BASELINE ═══ -->
+<section class="slide" data-section="04 · AP Baseline">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>04 · The Proposal</span>
-    <span>05 / 13</span>
+    <span>04 · AP Baseline</span><span>05 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">The Proposal — Parallel Special Intensive Revision</div>
-    <h2 class="headline">A shadow enumeration that catches every wrongful deletion before it becomes permanent.</h2>
-    <p class="deck-text">ECI runs the official process. We do not interfere. We run a parallel system — owned by YSRCP, engineered by SciEncephalon, staffed by KLM — that reconciles against the draft roll the moment it publishes.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">Andhra Pradesh Electoral Baseline — January 22, 2024 Final Roll · AP CEO Office</div>
+    <h2 class="headline">Every number the platform must protect.</h2>
 
-    <div class="why" style="flex:1;min-height:0;grid-template-columns:1fr 1fr 1fr">
-      <div class="why-card">
+    <div class="sbar g4">
+      <div class="sb"><span class="sk">Total Voters</span><div class="sv">4,08,07,256</div><div class="sl">Final January 2024 roll</div></div>
+      <div class="sb"><span class="sk">Male</span><div class="sv">2,00,74,322</div><div class="sl">49.2% of electorate</div></div>
+      <div class="sb"><span class="sk">Female</span><div class="sv">2,07,29,452</div><div class="sl">50.8% of electorate</div></div>
+      <div class="sb"><span class="sk">Service Electors</span><div class="sv">67,434</div><div class="sl">Disproportionately absent during BLO visits</div></div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card"><div class="ck">Polling Stations</div><div class="cv">46,165</div><div class="ct">One VPV per booth. Full coverage = 46,165 volunteers.</div></div>
+      <div class="card"><div class="ck">Constituencies</div><div class="cv">175</div><div class="ct">Constituency-level heatmaps for every in-charge. Full coverage by day 90.</div></div>
+      <div class="card"><div class="ck">Districts</div><div class="cv">26</div><div class="ct">Post-2022 reorganisation. One technical liaison each.</div></div>
+      <div class="card"><div class="ck">Third Gender</div><div class="cv">3,482</div><div class="ct">Registered third-gender voters on the 2024 roll.</div></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="ck">Prior Documented Deletions — ECI Complaint, Aug 28 2023</div>
+        <div class="ct" style="margin-top:2px"><strong style="color:var(--sci-danger)">40,000 voters deleted</strong> — Visakhapatnam East &nbsp;·&nbsp; <strong style="color:var(--sci-danger)">23,000</strong> — Vijayawada Central &nbsp;·&nbsp; Bulk deletions in Parchur, Tadikonda, Uravakonda. <span style="color:var(--sci-muted);font-size:9px;letter-spacing:.1em;text-transform:uppercase">Source: Wikipedia, 2024 AP Legislative Assembly Election</span></div>
+      </div>
+      <div class="card">
+        <div class="ck">2024 Election Context</div>
+        <div class="ct" style="margin-top:2px"><strong>81.86% voter turnout</strong> — ~3.34 crore votes cast. Dozens of seats decided by tight margins. Any SIR deletion scenario creates a vote pool shift that dwarfs those margins.</div>
+      </div>
+    </div>
+
+    <div class="sw"><b>Scale:</b>4.08 crore records · 46,165 booths · 26 districts · 175 constituencies. The platform must operate at national-census ingestion scale with Telugu-language support throughout.</div>
+  </div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">05 / 14</span></div>
+</section>
+
+<!-- ═══ SLIDE 6: THE PROPOSAL ═══ -->
+<section class="slide" data-section="05 · The Proposal">
+  <div class="chrome-top">
+    <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
+    <span>05 · The Proposal</span><span>06 / 14</span>
+  </div>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">Parallel Special Intensive Revision</div>
+    <h2 class="headline">A shadow enumeration that catches every wrongful deletion before it's permanent.</h2>
+
+    <div class="pillars" style="grid-template-columns:1fr 1fr 1fr;flex:1;min-height:0">
+      <div class="pillar">
         <div class="pk">01 · Shadow Enumeration</div>
         <h4>Build the Counter-Database First</h4>
-        <p>46,165 Voter Protection Volunteers capture every valid voter at the booth level through the party's existing karyakarta network. Stored in a single authoritative PostgreSQL database on AWS Mumbai — immutable, auditable, zero data leakage.</p>
+        <p>46,165 Voter Protection Volunteers capture every valid voter through the party's karyakarta network. Stored in a single authoritative PostgreSQL database on AWS Mumbai — immutable and auditable.</p>
       </div>
-      <div class="why-card dark">
+      <div class="pillar" style="background:var(--sci-navy)">
         <div class="pk">02 · Real-Time Reconciliation</div>
-        <h4>Match Against the ECI Draft Roll</h4>
-        <p>The moment ECI publishes the draft roll, the reconciliation engine cross-references every name in the shadow database. Every missing voter triggers an automatic Form 6 filing pipeline within the statutory claims window — no manual intervention needed.</p>
+        <h4 style="color:#fff">Match Against the ECI Draft Roll</h4>
+        <p style="color:rgba(255,255,255,.75)">The moment ECI publishes the draft roll, the engine cross-references every name. Every missing voter triggers an automatic Form 6 filing within the statutory window — no manual intervention.</p>
       </div>
-      <div class="why-card">
+      <div class="pillar">
         <div class="pk">03 · Form 7 Shield</div>
-        <h4>Detect and Counter Bulk Objections</h4>
-        <p>An ML model trained on documented 2024 AP deletion patterns detects bulk false Form 7 objections within 24 hours. Counter-filings go out automatically. Template writs to AP High Court are ready for permanent deletions — 72-hour filing.</p>
+        <h4>Counter Bulk Objections in 24 Hours</h4>
+        <p>ML model trained on 2024 AP deletion patterns detects bulk false Form 7 objections within 24 hours. Counter-filings go automatically. AP High Court writs ready for permanent deletions — 72-hour filing.</p>
       </div>
     </div>
 
-    <div class="grid c2" style="flex:0 0 auto">
+    <div class="grid g2">
       <div class="card">
-        <div class="k">What This Is</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          A <strong>voter protection platform</strong>. Built to detect and contest wrongful deletion within the statutory window. Stores only what is already on the public electoral roll. No persuasion, no targeting, no political data.
-        </div>
+        <div class="ck">What This Is</div>
+        <div class="ct">A <strong>voter protection platform.</strong> Stores only what is on the public electoral roll. No persuasion, no targeting, no political data. No caste. No religion. No political preference.</div>
       </div>
       <div class="card">
-        <div class="k">What This Is Not</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          Not a vendor engagement. Not a campaign tool. Does not store caste, religion, or political preference. Does not operate outside Indian sovereign territory. Not a surveillance system — it sunsets 30 days after the final roll publishes.
-        </div>
+        <div class="ck">What This Is Not</div>
+        <div class="ct">Not a vendor engagement. Not a campaign tool. Sunsets 30 days after the final roll publishes. Full open-source codebase handover on day 91. No lock-in.</div>
       </div>
     </div>
 
-    <div class="sowhat"><b>Core thesis:</b>the party does not need to fight SIR — it needs a database and an alarm system ready before the draft roll publishes. We are building that system. The window to act is the next 90 days.</div>
+    <div class="sw"><b>Core thesis:</b>the party needs a database and alarm system ready before the draft roll publishes. That is what we are building. The window is the next 90 days.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">05 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">06 / 14</span></div>
 </section>
 
-<!-- SLIDE 6: SIX PILLARS ============================================= -->
-<section class="slide" data-section="05 · Platform Pillars">
+<!-- ═══ SLIDE 7: SIX PILLARS ═══ -->
+<section class="slide" data-section="06 · Platform Pillars">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>05 · Platform Pillars</span>
-    <span>06 / 13</span>
+    <span>06 · Platform Pillars</span><span>07 / 14</span>
   </div>
-  <div class="body">
+  <div class="body" style="flex:1;min-height:0">
     <div class="kicker">Platform Architecture — Six Pillars</div>
-    <h2 class="headline">Six interlocking systems. Every deletion pathway covered.</h2>
-    <p class="deck-text">Each pillar addresses a specific failure mode in the BLO-visit process. Together they close every gap between the official enumeration and the final roll.</p>
+    <h2 class="headline">Every deletion pathway covered.</h2>
 
-    <div class="pillars">
+    <div class="pillars" style="grid-template-columns:repeat(3,1fr);flex:1;min-height:0">
       <div class="pillar">
-        <div class="top-row"><div class="num">01</div><div class="pk">WhatsApp</div></div>
+        <div class="tr"><div class="pnum">01</div><div class="pk">WhatsApp</div></div>
         <h4>Telugu Alert Bot</h4>
-        <p>Voter types their EPIC number. Bot returns roll status instantly. Auto-alerts when draft roll publishes and the voter's name is missing. <strong style="color:var(--sci-blue)">Meta WhatsApp Business API</strong>, full Telugu language support.</p>
+        <p>Voter types EPIC number → bot returns roll status. Auto-alerts when draft roll publishes and name is missing. Meta WhatsApp Business API, full Telugu support.</p>
       </div>
       <div class="pillar">
-        <div class="top-row"><div class="num">02</div><div class="pk">Ground Network</div></div>
+        <div class="tr"><div class="pnum">02</div><div class="pk">Ground Network</div></div>
         <h4>BLO Watch Network</h4>
-        <p>One Voter Protection Volunteer per booth. <strong style="color:var(--sci-blue)">46,165 VPVs total</strong>. Mobile app for geo-tagged BLO visit logging, household skip flagging, and irregularity reporting. Offline-first with local SQLite cache.</p>
+        <p><strong style="color:var(--sci-blue)">46,165 VPVs.</strong> Mobile app for geo-tagged BLO visit logging, household skip flagging, irregularity reporting. Offline-first, local SQLite cache.</p>
       </div>
       <div class="pillar">
-        <div class="top-row"><div class="num">03</div><div class="pk">Dashboard</div></div>
+        <div class="tr"><div class="pnum">03</div><div class="pk">Dashboard</div></div>
         <h4>Deletion Heatmap</h4>
-        <p>Public-facing mandal-level dashboard. Booths with &gt;3% deletion <strong style="color:var(--sci-danger)">auto-flagged red</strong>. Daily PDF brief at 6 AM to constituency in-charges. React + Recharts, Cloudflare WAF for DDoS protection.</p>
+        <p>Mandal-level dashboard. Booths with &gt;3% deletion <strong style="color:var(--sci-danger)">auto-flagged red.</strong> Daily 6 AM PDF brief per constituency in-charge. Cloudflare WAF protection.</p>
       </div>
       <div class="pillar">
-        <div class="top-row"><div class="num">04</div><div class="pk">ML Defense</div></div>
+        <div class="tr"><div class="pnum">04</div><div class="pk">ML Defense</div></div>
         <h4>Form 7 Abuse Shield</h4>
-        <p>XGBoost model trained on documented 2024 AP deletion patterns. Detects bulk false objections within <strong style="color:var(--sci-blue)">24 hours</strong>. Triggers counter-filing workflow automatically. Sentence-BERT for fuzzy Telugu name matching.</p>
+        <p>XGBoost trained on 2024 AP patterns. Detects bulk false objections within <strong style="color:var(--sci-blue)">24 hours.</strong> Sentence-BERT for fuzzy Telugu name matching across transliterations.</p>
       </div>
       <div class="pillar">
-        <div class="top-row"><div class="num">05</div><div class="pk">Outreach</div></div>
+        <div class="tr"><div class="pnum">05</div><div class="pk">Outreach</div></div>
         <h4>Migrant Worker Camps</h4>
-        <p>Pre-SIR enrollment camps at <strong style="color:var(--sci-blue)">Bengaluru, Hyderabad construction sites</strong>, Godavari and Nellore fishing harbours, and Mumbai Telugu communities — capturing voters before BLOs find empty homes.</p>
+        <p>Pre-SIR enrollment at Bengaluru &amp; Hyderabad construction sites, Godavari &amp; Nellore fishing harbours, Mumbai Telugu communities — before BLOs find empty homes.</p>
       </div>
       <div class="pillar">
-        <div class="top-row"><div class="num">06</div><div class="pk">Legal</div></div>
+        <div class="tr"><div class="pnum">06</div><div class="pk">Legal</div></div>
         <h4>Legal Fast-Track</h4>
-        <p>Lawyers on standby. Template writs ready. <strong style="color:var(--sci-danger)">AP High Court filings within 72 hours</strong> of any wrongful final deletion. Party legal cell coordinates filings within statutory windows.</p>
+        <p>Lawyers on standby. Template writs ready. <strong style="color:var(--sci-danger)">AP High Court within 72 hours</strong> of any wrongful final deletion. Party legal cell coordinates statutory filings.</p>
       </div>
     </div>
 
-    <div class="sowhat"><b>Coverage logic:</b>missing-household risk is addressed by Pillar 5. BLO visit irregularities by Pillar 2. Draft-roll deletions by Pillars 1 and 3. Bulk Form 7 attacks by Pillar 4. Permanent deletions that slip through by Pillar 6.</div>
+    <div class="sw"><b>Coverage logic:</b>Pillar 5 handles absent households · Pillar 2 flags BLO irregularities · Pillars 1+3 surface deletions · Pillar 4 counters Form 7 attacks · Pillar 6 litigates what slips through.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">06 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">07 / 14</span></div>
 </section>
 
-<!-- SLIDE 7: TECHNICAL ARCHITECTURE ================================== -->
-<section class="slide" data-section="06 · Technical Architecture">
+<!-- ═══ SLIDE 8: TECHNICAL ARCHITECTURE ═══ -->
+<section class="slide" data-section="07 · Technical Architecture">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>06 · Technical Architecture</span>
-    <span>07 / 13</span>
+    <span>07 · Technical Architecture</span><span>08 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">Technical Stack — Production Grade, Indian Data Residency</div>
-    <h2 class="headline">Built for 4.08 crore records, 46,165 concurrent field agents, and zero PII leakage.</h2>
-    <p class="deck-text">Every component is chosen for scale, auditability, and Indian data sovereignty. No voter data leaves AWS Mumbai (ap-south-1). EPIC number is the only key — Aadhaar is never stored.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">Technical Stack — Production Grade · Indian Data Residency · AWS ap-south-1</div>
+    <h2 class="headline">Built for 4.08 crore records. Zero PII leaves Indian sovereign territory.</h2>
 
-    <div class="grid c2" style="flex:1;min-height:0">
-      <div style="display:flex;flex-direction:column;gap:10px;height:100%">
-        <div class="card" style="flex:1">
-          <div class="k">Data Layer</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);line-height:2;margin-top:4px">
-            PostgreSQL 16 on AWS RDS, ap-south-1<br>
-            DuckDB — analytical queries on 4 Cr snapshots<br>
-            Apache Iceberg on S3 — immutable audit history<br>
-            Row-level security by constituency for VPV access
+    <div class="grid g2" style="flex:1;min-height:0">
+      <div style="display:flex;flex-direction:column;gap:8px;height:100%">
+        <div class="card" style="flex:1"><div class="ck">Data Layer</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            PostgreSQL 16 · AWS RDS · ap-south-1<br>DuckDB — analytical queries on 4 Cr snapshots<br>Apache Iceberg on S3 — immutable audit history<br>Row-level security by constituency for VPVs
           </div>
         </div>
-        <div class="card" style="flex:1">
-          <div class="k">Ingestion &amp; API Layer</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);line-height:2;margin-top:4px">
-            Apache Airflow DAGs — BLO visit reconciliation<br>
-            FastAPI REST — VPV mobile app + WhatsApp writes<br>
-            Celery async workers — high-volume claim filing<br>
-            CloudTrail + AWS Config — full database write audit
+        <div class="card" style="flex:1"><div class="ck">Ingestion &amp; API Layer</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            Apache Airflow DAGs — BLO reconciliation<br>FastAPI REST — VPV app + WhatsApp writes<br>Celery async — high-volume Form 6 filing<br>CloudTrail + AWS Config — full write audit
           </div>
         </div>
-        <div class="card" style="flex:1">
-          <div class="k">Security &amp; Identity</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);line-height:2;margin-top:4px">
-            EPIC number is primary key — Aadhaar never stored<br>
-            AES-256 at rest · TLS 1.3 in transit<br>
-            No PII in logs · No PII in third-party services<br>
-            Cloudflare WAF — public dashboard DDoS protection
+        <div class="card" style="flex:1"><div class="ck">Security · EPIC number is the only key. Aadhaar never stored.</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            AES-256 at rest · TLS 1.3 in transit<br>No PII in logs · No PII in third-party services<br>Cloudflare WAF — public dashboard protection
           </div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;height:100%">
-        <div class="card" style="flex:1">
-          <div class="k">ML Layer</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);line-height:2;margin-top:4px">
-            XGBoost — Form 7 bulk-abuse detection<br>
-            Sentence-BERT — fuzzy Telugu/English name match<br>
-            FAISS — high-recall duplicate detection, 4.08 Cr records<br>
-            Training data: documented 2024 AP deletion patterns
+      <div style="display:flex;flex-direction:column;gap:8px;height:100%">
+        <div class="card" style="flex:1"><div class="ck">ML Layer</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            XGBoost — Form 7 bulk-abuse detection<br>Sentence-BERT — fuzzy Telugu/English name match<br>FAISS — duplicate detection across 4.08 Cr records<br>Training: 2024 AP documented deletion patterns
           </div>
         </div>
-        <div class="card" style="flex:1">
-          <div class="k">Application Layer</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(11px,.85vw,14px);color:var(--sci-navy);line-height:2;margin-top:4px">
-            React Native VPV app — offline-first, SQLite cache<br>
-            Telugu WhatsApp Bot — Meta Business API<br>
-            React + Recharts deletion heatmap dashboard<br>
-            PDF report engine — 6 AM daily brief per constituency
+        <div class="card" style="flex:1"><div class="ck">Application Layer</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            React Native VPV app — offline-first, SQLite<br>Telugu WhatsApp Bot — Meta Business API<br>React + Recharts deletion heatmap dashboard<br>PDF report engine — 6 AM daily per constituency
           </div>
         </div>
-        <div class="card" style="flex:1">
-          <div class="k">Data Model — voter_shadow (no caste, no religion)</div>
-          <div style="font-family:var(--font-mono);font-size:clamp(10px,.78vw,12.5px);color:var(--sci-navy);line-height:1.85;margin-top:4px">
-            epic_number PK · name_english · name_telugu<br>
-            booth_id · mandal_id · constituency_id · district_id<br>
-            official_roll_status: present/absent/contested/recovered<br>
-            alert_status: none/alerted/form6_filed/form7_received/resolved
+        <div class="card" style="flex:1"><div class="ck">voter_shadow model — no caste · no religion · no political preference</div>
+          <div style="font-family:var(--font-mono);font-size:clamp(9.5px,.74vw,12px);color:var(--sci-navy);line-height:1.85;margin-top:3px">
+            epic_number PK · name_english · name_telugu<br>booth_id · mandal_id · constituency_id<br>official_roll_status: present/absent/contested<br>alert_status: none/alerted/form6_filed/resolved
           </div>
         </div>
       </div>
     </div>
 
-    <div class="sowhat"><b>Sovereignty guarantee:</b>all voter data resides in AWS ap-south-1. CloudTrail logs every write. The party's legal cell can audit any record at any time. Full open-source codebase handover on day 91.</div>
+    <div class="sw"><b>Sovereignty:</b>all voter data in AWS ap-south-1. CloudTrail logs every write. Full open-source codebase handover to the party on day 91. No lock-in.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">07 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">08 / 14</span></div>
 </section>
 
-<!-- SLIDE 8: HIGH-RISK ZONES ========================================= -->
-<section class="slide" data-section="07 · High-Risk Zones">
+<!-- ═══ SLIDE 9: HIGH-RISK ZONES ═══ -->
+<section class="slide" data-section="08 · High-Risk Zones">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>07 · High-Risk Zones</span>
-    <span>08 / 13</span>
+    <span>08 · High-Risk Zones</span><span>09 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">Priority Deployment — Week One High-Risk Zones</div>
-    <h2 class="headline">These six areas go live in week one, before statewide scale.</h2>
-    <p class="deck-text">Priority is determined by documented prior deletion history, seasonal migration patterns, and structural BLO-skip risk. The pilot zone is Sri Gadikota Srikanth Reddy's home constituencies — validation before scale.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">Priority Deployment — Six High-Risk Zones · Week One</div>
+    <h2 class="headline">These six areas go live in week one before statewide scale.</h2>
 
-    <div class="zones">
-      <div class="zone high">
-        <div class="z-label">Critical · Documented Deletion</div>
+    <div class="zones" style="flex:1;min-height:0">
+      <div class="zone hi">
+        <div class="zl">Critical · Documented Deletion</div>
         <h5>Visakhapatnam East &amp; Vijayawada Central</h5>
-        <div class="z-risk">40,000 and 23,000 voters formally documented as deleted in 2024. ECI complaints lodged August 28, 2023. Highest prior-cycle deletion record in the state.</div>
-        <div class="z-action">Immediate Form 7 watch · Legal cell pre-positioned · VPV double coverage at every booth</div>
+        <div class="zr">40,000 and 23,000 voters formally documented as deleted in 2024. Highest prior-cycle deletion record in AP.</div>
+        <div class="za">Immediate Form 7 watch · Legal cell pre-positioned · VPV double coverage</div>
       </div>
-      <div class="zone high">
-        <div class="z-label">High Risk · Seasonal Migration</div>
+      <div class="zone hi">
+        <div class="zl">High Risk · Seasonal Migration</div>
         <h5>Srikakulam, Vizianagaram &amp; Prakasam</h5>
-        <div class="z-risk">High seasonal migration outflow during BLO visit window. BLOs find empty homes. Migrants classified as "not traceable" — names dropped from rolls.</div>
-        <div class="z-action">Migrant enrollment camps at destination cities before harvest-season departure. Pre-registration drives in Jan–Feb.</div>
+        <div class="zr">High migration outflow during BLO visits. BLOs find empty homes — migrants classified "not traceable" and dropped.</div>
+        <div class="za">Migrant enrollment camps at destination cities before harvest-season departure</div>
       </div>
-      <div class="zone high">
-        <div class="z-label">High Risk · Fishing Community Absence</div>
+      <div class="zone hi">
+        <div class="zl">High Risk · Fishing Communities</div>
         <h5>East &amp; West Godavari Coast, Nellore</h5>
-        <div class="z-risk">Fishing communities absent at sea for weeks during BLO visits. Structural non-traceability risk for tens of thousands of valid voters every cycle.</div>
-        <div class="z-action">Harbour enrollment drives. Community leaders authorised as proxy liaisons for household verification.</div>
+        <div class="zr">Fishing communities absent at sea for weeks during BLO visits — structural non-traceability for tens of thousands.</div>
+        <div class="za">Harbour enrollment drives · Community leaders as proxy liaisons</div>
       </div>
-      <div class="zone high">
-        <div class="z-label">High Risk · Highest BLO Skip Rate</div>
-        <h5>SC/ST Reserved Seats: Razole, Madakasira, Gangadhara Nellore</h5>
-        <div class="z-risk">SC and ST reserved constituencies have historically the highest BLO skip rates nationally. Self-help group women know every household — standard VPV model fails here.</div>
-        <div class="z-action">SHG women appointed as VPVs with direct mobile app access. Community-led verification for every household.</div>
+      <div class="zone hi">
+        <div class="zl">Highest BLO Skip Rate Nationally</div>
+        <h5>SC/ST Seats: Razole, Madakasira, Gangadhara Nellore</h5>
+        <div class="zr">SC/ST reserved constituencies have nationally the highest BLO skip rates. Standard VPV model fails here.</div>
+        <div class="za">SHG women appointed as VPVs — they know every household</div>
       </div>
       <div class="zone">
-        <div class="z-label">Structural Risk · Boundary Confusion</div>
+        <div class="zl">Structural Risk · Boundary Confusion</div>
         <h5>New Districts: Palnadu, Bapatla, Alluri Sitharama Raju</h5>
-        <div class="z-risk">Constituency boundary confusion after the 2022 district reorganisation. Voters unsure of their correct booth or constituency are routinely misregistered or missed.</div>
-        <div class="z-action">Boundary awareness camps and re-registration drives. District liaison provides on-ground navigation support.</div>
+        <div class="zr">Post-2022 constituency boundary confusion leads to misregistration and missed voters every cycle.</div>
+        <div class="za">Boundary awareness camps · Re-registration drives · District liaison support</div>
       </div>
       <div class="zone pilot">
-        <div class="z-label">Pilot Zone · Validation Site</div>
+        <div class="zl">Pilot Zone · Validation Site · Day 1</div>
         <h5>Rayachoti &amp; Annamayya District</h5>
-        <div class="z-risk">Home turf of Sri Gadikota Srikanth Reddy. Full six-pillar deployment in week one — 350 booths, 5 lakh shadow records by day 21, heatmap live by day 25.</div>
-        <div class="z-action">Proof of concept before statewide scale. Party review on day 30. Go/no-go for 26-district rollout.</div>
+        <div class="zr">Home turf of Sri Gadikota Srikanth Reddy. Full six-pillar deployment in week one. 350 booths. 5 lakh records by day 21.</div>
+        <div class="za">Proof of concept before statewide scale · Party review on day 30</div>
       </div>
     </div>
 
-    <div class="sowhat"><b>Sequencing logic:</b>the pilot in Rayachoti proves the system works in 30 days on the party's own turf. High-risk zones get double VPV coverage from day one. Full statewide deployment follows by day 60.</div>
+    <div class="sw"><b>Logic:</b>the pilot in Rayachoti proves the system on the party's own ground in 30 days. High-risk zones get double VPV coverage from day one. Full statewide by day 60.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">08 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">09 / 14</span></div>
 </section>
 
-<!-- SLIDE 9: 90-DAY DELIVERY PLAN ==================================== -->
-<section class="slide" data-section="08 · 90-Day Plan">
+<!-- ═══ SLIDE 10: 90-DAY PLAN ═══ -->
+<section class="slide" data-section="09 · 90-Day Plan">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>08 · 90-Day Plan</span>
-    <span>09 / 13</span>
+    <span>09 · 90-Day Plan</span><span>10 / 14</span>
   </div>
-  <div class="body">
+  <div class="body" style="flex:1;min-height:0">
     <div class="kicker">90-Day Delivery Plan — Three Phases</div>
     <h2 class="headline">Pilot in 30. Statewide in 90. Reconciliation-ready before the draft publishes.</h2>
-    <p class="deck-text">Each phase has a hard go/no-go review. If the Rayachoti pilot fails to deliver in 30 days, the party has lost nothing. If it succeeds, the statewide rollout is already sequenced.</p>
 
-    <div class="timeline">
+    <div class="timeline" style="flex:1;min-height:0">
       <div class="phase">
-        <div class="ph-label">Phase 1</div>
+        <div class="pl">Phase 1</div>
         <h4>Pilot: Rayachoti &amp; Annamayya</h4>
-        <div class="ph-range">Days 1 – 30</div>
+        <div class="pr">Days 1 – 30</div>
         <ul>
-          <li>Day 3: AWS infrastructure live, PostgreSQL schema deployed, S3 buckets configured</li>
-          <li>Day 7: Telugu WhatsApp bot live with EPIC lookup against AP CEO public roll</li>
-          <li>Day 14: VPV mobile app distributed to 350 booths in Rayachoti &amp; Annamayya</li>
-          <li>Day 21: First 5 lakh voter records enumerated and shadowed</li>
-          <li>Day 25: Deletion heatmap dashboard live for Annamayya district</li>
-          <li>Day 28: Form 7 abuse detection model deployed with 2024 training data</li>
-          <li>Day 30: Pilot review with Sri Gadikota Srikanth Reddy and party leadership</li>
+          <li><strong>Day 3</strong> — AWS infra live, PostgreSQL schema, S3 configured</li>
+          <li><strong>Day 7</strong> — Telugu WhatsApp bot live with EPIC lookup</li>
+          <li><strong>Day 14</strong> — VPV mobile app on 350 booths</li>
+          <li><strong>Day 21</strong> — First 5 lakh records enumerated &amp; shadowed</li>
+          <li><strong>Day 25</strong> — Deletion heatmap live for Annamayya</li>
+          <li><strong>Day 28</strong> — Form 7 abuse model deployed</li>
+          <li><strong>Day 30</strong> — Pilot review with party leadership</li>
         </ul>
       </div>
       <div class="phase p2">
-        <div class="ph-label">Phase 2</div>
+        <div class="pl">Phase 2</div>
         <h4>Statewide Rollout</h4>
-        <div class="ph-range">Days 31 – 90</div>
+        <div class="pr">Days 31 – 90</div>
         <ul>
-          <li>Day 45: All 26 district technical liaisons trained</li>
-          <li>Day 60: VPV app deployed to all 46,165 booths statewide</li>
-          <li>Day 60: Migrant camps live in Bengaluru, Hyderabad, Mumbai, and Chennai</li>
-          <li>Day 75: 4.08 crore voter shadow database fully enumerated</li>
-          <li>Day 80: Reconciliation engine ready for ECI draft roll publication</li>
-          <li>Day 85: Legal fast-track pipeline operational with template writs</li>
-          <li>Day 90: Full statewide go-live confirmed</li>
+          <li><strong>Day 45</strong> — All 26 district liaisons trained</li>
+          <li><strong>Day 60</strong> — VPV app on all 46,165 booths</li>
+          <li><strong>Day 60</strong> — Migrant camps live in Bengaluru, Hyderabad, Mumbai</li>
+          <li><strong>Day 75</strong> — 4.08 crore shadow database complete</li>
+          <li><strong>Day 80</strong> — Reconciliation engine ready for draft roll</li>
+          <li><strong>Day 85</strong> — Legal pipeline with template writs operational</li>
+          <li><strong>Day 90</strong> — Full statewide go-live confirmed</li>
         </ul>
       </div>
       <div class="phase p3">
-        <div class="ph-label">Phase 3</div>
+        <div class="pl">Phase 3</div>
         <h4>Reconciliation &amp; Recovery</h4>
-        <div class="ph-range">Day 90 → Final Roll Publication</div>
+        <div class="pr">Day 90 → Final Roll Publication</div>
         <ul>
-          <li>Every BLO visit observation logged in real time</li>
-          <li>Every household skip flagged and queued for re-verification</li>
-          <li>Every Form 7 objection received parsed within 4 hours</li>
-          <li>Automatic Form 6 filing for every name missing from draft roll</li>
-          <li>AP High Court writ within 72 hours of any wrongful final deletion</li>
-          <li>Day 91 after final roll: full data control transferred to YSRCP custodian</li>
-          <li>Platform sunset within 30 days of final roll publication</li>
+          <li>Every BLO visit logged in real time</li>
+          <li>Every household skip flagged for re-verification</li>
+          <li>Every Form 7 objection parsed within 4 hours</li>
+          <li>Automatic Form 6 for every name missing from draft roll</li>
+          <li>AP High Court writ within 72 hours of any final deletion</li>
+          <li><strong>Day 91</strong> — Full data control transferred to YSRCP</li>
+          <li>Platform sunsets within 30 days of final roll</li>
         </ul>
       </div>
     </div>
 
-    <div class="sowhat"><b>The commitment:</b>SciEncephalon delivers the technology. KLM mobilises 46,165 VPVs. Nanda Kishore manages delivery and party coordination. Three workstreams, one 90-day commitment, zero cost to the party.</div>
+    <div class="sw"><b>Commitment:</b>SciEncephalon builds. KLM mobilises 46,165 VPVs. Nanda Kishore manages delivery. Three workstreams. One 90-day commitment.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">09 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">10 / 14</span></div>
 </section>
 
-<!-- SLIDE 10: ZERO-COST INVESTMENT =================================== -->
-<section class="slide" data-section="09 · Zero-Cost Commitment">
+<!-- ═══ SLIDE 11: RESOURCES & COMMITMENTS ═══ -->
+<section class="slide" data-section="10 · Resources &amp; Commitments">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>09 · Zero-Cost Commitment</span>
-    <span>10 / 13</span>
+    <span>10 · Resources &amp; Commitments</span><span>11 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">In-Kind Contribution — What We Are Committing at Zero Cost to the Party</div>
-    <h2 class="headline">₹3.5 to ₹4 crore in platform value. Cost to YSRCP: ₹0.</h2>
-    <p class="deck-text">These are not discounted rates. These are market consulting rates for the same capability delivered commercially. All three principals are committing personal time and SciEncephalon engineering resources at no charge.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">What the Three Principals Are Committing</div>
+    <h2 class="headline">Platform engineering, ground operations, and program delivery — fully resourced.</h2>
 
-    <div style="background:#fff;border:1px solid var(--sci-hair);border-radius:16px;padding:clamp(18px,1.6vw,28px) clamp(20px,1.8vw,32px);flex:1;min-height:0;box-shadow:0 10px 24px -18px rgba(15,23,42,.18);overflow:hidden">
-      <div class="cost-row">
-        <div class="item"><strong>Platform Engineering</strong> — 90-day full-stack build (SciEncephalon team)</div>
-        <div class="market">~₹1.8 crore</div>
-        <div class="party">₹0</div>
+    <div class="team" style="flex:0 0 auto">
+      <div class="tc">
+        <div class="tr2">SciEncephalon AI</div>
+        <h4>Platform Engineering</h4>
+        <ul>
+          <li>Full-stack engineering team for the 90-day build</li>
+          <li>AWS ap-south-1 production infrastructure</li>
+          <li>ML model development and training</li>
+          <li>WhatsApp Business API integration &amp; Telugu bot</li>
+          <li>React Native VPV mobile app</li>
+          <li>Full open-source codebase handover on day 91</li>
+        </ul>
       </div>
-      <div class="cost-row">
-        <div class="item"><strong>AWS Infrastructure</strong> — ap-south-1 production environment, 6 months</div>
-        <div class="market">₹35–50 lakh</div>
-        <div class="party">₹0</div>
+      <div class="tc">
+        <div class="tr2">KLM Group</div>
+        <h4>Ground Operations</h4>
+        <ul>
+          <li>46,165 Voter Protection Volunteers — one per booth</li>
+          <li>District-level coordinator network across 26 districts</li>
+          <li>Migrant enrollment camps in Bengaluru, Hyderabad, Mumbai</li>
+          <li>Fishing harbour outreach — Godavari and Nellore coasts</li>
+          <li>SHG women VPV appointments for SC/ST constituencies</li>
+        </ul>
       </div>
-      <div class="cost-row">
-        <div class="item"><strong>WhatsApp Business API</strong> — message volume for Telugu bot (open-source LLM, minimal API tier)</div>
-        <div class="market">~₹15 lakh</div>
-        <div class="party">₹0</div>
-      </div>
-      <div class="cost-row">
-        <div class="item"><strong>ML Model Development &amp; Training</strong> — Form 7 abuse detection, name matching, duplicate detection</div>
-        <div class="market">~₹40 lakh</div>
-        <div class="party">₹0</div>
-      </div>
-      <div class="cost-row">
-        <div class="item"><strong>KLM Ground Operations</strong> — 46,165 VPV coordination, migrant camp logistics across 26 districts</div>
-        <div class="market">~₹60 lakh</div>
-        <div class="party">₹0</div>
-      </div>
-      <div class="cost-row">
-        <div class="item"><strong>Program Management</strong> — 90-day delivery oversight, party stakeholder coordination (Nanda Kishore)</div>
-        <div class="market">~₹30 lakh</div>
-        <div class="party">₹0</div>
-      </div>
-      <div class="cost-total" style="margin-top:12px">
-        <div class="item">Total In-Kind Contribution — Three Principals</div>
-        <div class="market">~₹3.5 – 4 crore</div>
-        <div class="party">₹0</div>
+      <div class="tc">
+        <div class="tr2">Nanda Kishore Tadepally</div>
+        <h4>Program Delivery</h4>
+        <ul>
+          <li>90-day delivery oversight across all three workstreams</li>
+          <li>Party stakeholder alignment and MLA office liaison</li>
+          <li>26-district technical liaison onboarding by day 45</li>
+          <li>Legal cell coordination for statutory filing windows</li>
+          <li>Pilot review with party leadership on day 30</li>
+        </ul>
       </div>
     </div>
 
-    <div class="grid c2" style="flex:0 0 auto">
+    <div class="grid g2">
       <div class="card">
-        <div class="k">Post-6-Month Hosting (Party Assumes)</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          After the free 6-month infrastructure window, ongoing hosting costs are approximately <strong>₹6 to ₹8 lakh per month</strong>. Full documentation and open-source codebase handover ensures <strong>no vendor lock-in</strong> and competitive re-tendering.
-        </div>
+        <div class="ck">Infrastructure &amp; Data Sovereignty</div>
+        <div class="ct">All voter data resides in <strong>AWS ap-south-1 (Mumbai).</strong> Full administrative control transfers to a YSRCP-designated custodian on day 91. No data leaves Indian sovereign territory.</div>
       </div>
       <div class="card">
-        <div class="k">Data Ownership &amp; Transition</div>
-        <div style="font-size:clamp(12px,.95vw,16px);color:var(--sci-navy);line-height:1.6;margin-top:4px">
-          The voter shadow database is <strong>owned by YSRCP</strong>. On day 91, full administrative control transfers to a YSRCP-designated data custodian. SciEncephalon retains read-only diagnostic access for system support only.
-        </div>
+        <div class="ck">Platform Lifecycle</div>
+        <div class="ct">Platform sunsets within <strong>30 days of final roll publication.</strong> All voter PII purged. Full open-source codebase handover — no lock-in. Aggregated analytical insights retained for the next SIR cycle.</div>
       </div>
     </div>
 
-    <div class="sowhat"><b>The offer in one line:</b>three principals committing personal time and ₹3.5–4 crore in platform value, for the right to protect AP's voters from wrongful deletion, at zero cost and zero lock-in.</div>
+    <div class="sw"><b>The commitment:</b>three principals dedicating personal time and full engineering, operations, and program delivery resources — so that no valid YSRCP voter is silently deleted before the final roll publishes.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">10 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">11 / 14</span></div>
 </section>
 
-<!-- SLIDE 11: THE ASK ================================================ -->
-<section class="slide" data-section="10 · The Ask">
+<!-- ═══ SLIDE 12: THE ASK ═══ -->
+<section class="slide" data-section="11 · The Ask">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>10 · The Ask</span>
-    <span>11 / 13</span>
+    <span>11 · The Ask</span><span>12 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">What We Need From the Party — The Entire Ask</div>
-    <h2 class="headline">Six operational resources. No funding. No equity. No employment.</h2>
-    <p class="deck-text">The three principals absorb every cost and all engineering effort. The party's contribution is coordination access, not capital. This is the complete list — nothing is left unstated.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">What We Need From the Party — The Complete Ask</div>
+    <h2 class="headline">Six coordination items. No political role. No long-term obligation.</h2>
 
-    <div class="asks">
-      <div class="ask-row">
-        <div class="ask-item">Access to 175 Constituency WhatsApp Networks</div>
-        <div class="ask-why">The bot reaches every karyakarta in week one. Without network access, the alert system has no reach.</div>
+    <div class="asks" style="flex:1;min-height:0">
+      <div class="ar">
+        <div class="ai">Access to 175 Constituency WhatsApp Networks</div>
+        <div class="aw">Bot reaches every karyakarta in week one. Without network access, the alert system has no reach.</div>
       </div>
-      <div class="ask-row">
-        <div class="ask-item">One Technical Liaison Per District — 26 People Total</div>
-        <div class="ask-why">Telugu-speaking local point of contact for each district. Does not need to code. Coordinates VPV onboarding and local irregularity escalation.</div>
+      <div class="ar">
+        <div class="ai">One Technical Liaison Per District — 26 People</div>
+        <div class="aw">Telugu-speaking local contact per district. Does not need to code. Coordinates VPV onboarding and escalation.</div>
       </div>
-      <div class="ask-row">
-        <div class="ask-item">MLA Office Buy-In at All 175 Offices</div>
-        <div class="ask-why">The deletion heatmap flags become MLA office action items. Without this link, the operational loop between the dashboard and the legal filing pipeline breaks.</div>
+      <div class="ar">
+        <div class="ai">MLA Office Buy-In at All 175 Offices</div>
+        <div class="aw">Heatmap flags become MLA office action items. Without this link, the dashboard-to-filing pipeline breaks.</div>
       </div>
-      <div class="ask-row">
-        <div class="ask-item">Authorisation Letter From Party Leadership</div>
-        <div class="ask-why">When we onboard NRI volunteer engineers and district-level staff, they need sanctioned standing from the party. Required before any field deployment begins.</div>
+      <div class="ar">
+        <div class="ai">Authorisation Letter From Party Leadership</div>
+        <div class="aw">NRI volunteer engineers and district staff need sanctioned standing before any field deployment begins.</div>
       </div>
-      <div class="ask-row">
-        <div class="ask-item">Pilot Greenlight for Rayachoti &amp; Annamayya District</div>
-        <div class="ask-why">Sri Gadikota Srikanth Reddy's home turf is the validation zone. A 30-day pilot in his constituency is the proof of concept before statewide commitment.</div>
+      <div class="ar">
+        <div class="ai">Pilot Greenlight for Rayachoti &amp; Annamayya</div>
+        <div class="aw">Sri Gadikota Srikanth Reddy's home turf is the 30-day proof of concept before statewide commitment.</div>
       </div>
-      <div class="ask-row">
-        <div class="ask-item">Legal Cell Coordination</div>
-        <div class="ask-why">Counter-filings under the statutory claims window and AP High Court writs require the party's legal infrastructure and standing. We provide the templates; the party files.</div>
+      <div class="ar">
+        <div class="ai">Legal Cell Coordination</div>
+        <div class="aw">Counter-filings within the statutory window and AP High Court writs require party legal infrastructure and standing.</div>
       </div>
     </div>
 
-    <div class="sowhat"><b>What we are not asking for:</b>no funding, no equity, no employment contracts, no political role, no long-term obligation. The party's only commitment is the six coordination items above. If the pilot fails in 30 days, walk away.</div>
+    <div class="sw"><b>What we are not asking for:</b>no political role · no long-term obligation. If the pilot fails in 30 days, walk away with nothing lost.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">11 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">12 / 14</span></div>
 </section>
 
-<!-- SLIDE 12: THE TEAM =============================================== -->
-<section class="slide" data-section="11 · The Team">
+<!-- ═══ SLIDE 13: THE TEAM ═══ -->
+<section class="slide" data-section="12 · The Team">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>11 · The Team</span>
-    <span>12 / 13</span>
+    <span>12 · The Team</span><span>13 / 14</span>
   </div>
-  <div class="body">
-    <div class="kicker">The Three Principals — Why This Combination Is Unique</div>
-    <h2 class="headline">Technology, ground reach, and program delivery. None sufficient alone.</h2>
-    <p class="deck-text">Each principal contributes an irreplaceable capability. SciEncephalon builds the system. KLM puts it into 46,165 booths. Nanda Kishore ensures all three workstreams ship on commitment, with full transparency to party leadership.</p>
+  <div class="body" style="flex:1;min-height:0">
+    <div class="kicker">Three Principals — Technology · Ground Reach · Program Delivery</div>
+    <h2 class="headline">None of the three would be sufficient alone.</h2>
 
-    <div class="team">
-      <div class="team-card">
-        <div class="tc-role">Technology Principal</div>
+    <div class="team" style="flex:1;min-height:0">
+      <div class="tc">
+        <div class="tr2">Technology Principal</div>
         <h4>Narahara Chari Dingari</h4>
-        <div class="tc-org">Chief Information Officer · SciEncephalon AI</div>
-        <p>Concurrently serves as Chief Data and AI Officer at Powerlytics. Prior engineering leadership at Deutsche Bank, Dun &amp; Bradstreet, Prudential, EMC, and Citi. Ph.D. in Physics, M.S. in Quantum Physics. Deep operational experience ingesting tens of millions of records from messy government and commercial sources — matching, cleaning, and surfacing decision-grade signals to non-technical executives. This platform is in his primary domain.</p>
+        <div class="org">Chief Information Officer · SciEncephalon AI</div>
+        <ul>
+          <li>Concurrent CDAO at Powerlytics</li>
+          <li>Prior: Deutsche Bank · Dun &amp; Bradstreet · Prudential · EMC · Citi</li>
+          <li>Ph.D. Physics · M.S. Quantum Physics</li>
+          <li>Ingested tens of millions of government &amp; commercial records at production scale</li>
+          <li>This platform is in his primary engineering domain</li>
+        </ul>
       </div>
-      <div class="team-card">
-        <div class="tc-role">Ground Operations Principal</div>
+      <div class="tc">
+        <div class="tr2">Ground Operations Principal</div>
         <h4>Lurdu Kunireddy</h4>
-        <div class="tc-org">Promoter · KLM Group</div>
-        <p>Brings the ground reach, operational discipline, and karyakarta-level network required to take what SciEncephalon builds and put it into 46,165 booths across 26 districts within 60 days. KLM's on-the-ground presence and district-level relationships are the deployment channel that no technology team can replicate from a data center. The difference between a platform that exists and one that is used.</p>
+        <div class="org">Promoter · KLM Group</div>
+        <ul>
+          <li>Ground reach across all 26 AP districts</li>
+          <li>Karyakarta-level network for 46,165-booth deployment</li>
+          <li>Operational discipline to deploy within 60 days</li>
+          <li>The difference between a platform that exists and one that is used</li>
+        </ul>
       </div>
-      <div class="team-card">
-        <div class="tc-role">Program Delivery Principal</div>
+      <div class="tc">
+        <div class="tr2">Program Delivery Principal</div>
         <h4>Nanda Kishore Tadepally</h4>
-        <div class="tc-org">Program Director</div>
-        <p>Provides the program delivery rigour and party coordination infrastructure that ensures the three workstreams ship on time, on commitment, and with full transparency to YSRCP leadership. Manages MLA office liaison across 175 constituencies, 26-district technical liaison onboarding, and the legal cell coordination that converts heatmap alerts into statutory filings within the required window.</p>
+        <div class="org">Program Director</div>
+        <ul>
+          <li>Program delivery rigour and party coordination</li>
+          <li>MLA office liaison across 175 constituencies</li>
+          <li>26-district technical liaison onboarding</li>
+          <li>Legal cell coordination for statutory filing windows</li>
+          <li>Ensures all three workstreams ship on commitment</li>
+        </ul>
       </div>
     </div>
 
-    <div class="sowhat"><b>Why this team:</b>the combination of a Ph.D. data engineer who has ingested national-scale government records, a ground operator with 46,000-booth reach, and a program director with direct party access — is the reason a 90-day statewide deployment is feasible at all.</div>
+    <div class="sw"><b>Why this team:</b>a Ph.D. data engineer who has ingested national-scale government records + a 46,000-booth ground operator + a program director with direct party access = 90-day statewide feasibility.</div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">12 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">13 / 14</span></div>
 </section>
 
-<!-- SLIDE 13: CLOSE ================================================== -->
+<!-- ═══ SLIDE 14: CLOSE ═══ -->
 <section class="slide dark close-slide" data-section="Close">
   <div class="chrome-top">
     <span class="brand-lockup"><span class="bl-brand"><span class="bl-sci">Sci</span><span class="bl-enc">Encephalon</span></span><span class="bl-ai">AI</span><span class="bl-div"></span><span class="bl-sub">Voter Protection Mission · May 2026</span></span>
-    <span>Decision</span>
-    <span>13 / 13</span>
+    <span>Decision</span><span>14 / 14</span>
   </div>
   <div class="close-inner">
-    <div class="close-brand">
+    <div class="close-lhs">
       <div class="close-mark"><span class="sci">Sci</span><span class="enc">Encephalon</span><span class="ai">AI</span></div>
       <div class="close-rule"></div>
-      <div class="close-tag">Andhra Pradesh Voter Protection Mission · SIR 2026</div>
-      <div class="close-stats-grid">
-        <div class="close-stat"><div class="v">₹0</div><div class="l">Cost to YSRCP</div></div>
-        <div class="close-stat"><div class="v">90 days</div><div class="l">Full statewide delivery</div></div>
-        <div class="close-stat"><div class="v">4.08 Cr</div><div class="l">Voters protected</div></div>
+      <div style="font-family:var(--font-tag);font-size:clamp(10px,.8vw,13px);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)">Andhra Pradesh Voter Protection Mission · SIR 2026</div>
+      <div class="cstat-grid">
+        <div class="cstat"><div class="v">4.08 Cr</div><div class="l">Voters Protected</div></div>
+        <div class="cstat"><div class="v">90 Days</div><div class="l">Full Delivery</div></div>
+        <div class="cstat"><div class="v">46,165</div><div class="l">Booths Covered</div></div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
-        <span class="close-chip" style="font-family:var(--font-mono);font-size:clamp(9.5px,.66vw,11.5px);letter-spacing:.08em;color:var(--sci-cyan);border:1px solid rgba(0,194,232,.35);border-radius:999px;padding:4px 10px;background:rgba(0,194,232,.06)">46,165 VPVs</span>
-        <span class="close-chip" style="font-family:var(--font-mono);font-size:clamp(9.5px,.66vw,11.5px);letter-spacing:.08em;color:var(--sci-cyan);border:1px solid rgba(0,194,232,.35);border-radius:999px;padding:4px 10px;background:rgba(0,194,232,.06)">26 Districts</span>
-        <span class="close-chip" style="font-family:var(--font-mono);font-size:clamp(9.5px,.66vw,11.5px);letter-spacing:.08em;color:var(--sci-cyan);border:1px solid rgba(0,194,232,.35);border-radius:999px;padding:4px 10px;background:rgba(0,194,232,.06)">175 Constituencies</span>
-        <span class="close-chip" style="font-family:var(--font-mono);font-size:clamp(9.5px,.66vw,11.5px);letter-spacing:.08em;color:var(--sci-cyan);border:1px solid rgba(0,194,232,.35);border-radius:999px;padding:4px 10px;background:rgba(0,194,232,.06)">AWS ap-south-1</span>
+      <div class="chip-row" style="margin-top:4px">
+        <span class="chip">26 Districts</span><span class="chip">175 Constituencies</span><span class="chip">AWS ap-south-1</span><span class="chip">Telugu Bot</span>
       </div>
     </div>
-    <div class="close-headline">
+    <div class="close-rhs">
       <div class="k">The Decision in Front of the Party</div>
       <div class="h1">Show up with a database — or show up with a <span>complaint.</span></div>
-      <div class="body-text">SIR 2026 will run in Andhra Pradesh whether YSRCP participates with a parallel system or not. The only decision is whether to show up with a database and an alarm system — or to discover the deletions after the roll is already final.</div>
-      <div class="next-steps">
-        <div><span>Day 0</span>Verbal greenlight from Sri Gadikota Srikanth Reddy for Rayachoti pilot</div>
+      <div class="bt">SIR 2026 will run whether YSRCP participates or not. The only question is whether to have a database and an alarm system ready — or discover the deletions after the roll is final.</div>
+      <div class="ns">
+        <div><span>Day 0</span>Verbal greenlight from Sri Gadikota Srikanth Reddy</div>
         <div><span>Day 1</span>Authorisation letter from party leadership</div>
-        <div><span>Day 2</span>SciEncephalon begins AWS infrastructure provisioning</div>
+        <div><span>Day 2</span>SciEncephalon begins AWS provisioning</div>
         <div><span>Day 3</span>KLM begins VPV identification in Rayachoti</div>
-        <div><span>Day 7</span>First Telugu WhatsApp bot live for public testing</div>
-        <div><span>Day 30</span>Pilot review — go/no-go for statewide rollout</div>
+        <div><span>Day 7</span>First Telugu WhatsApp bot live</div>
+        <div><span>Day 30</span>Pilot review — go/no-go for statewide</div>
       </div>
-      <div class="close-slide contact" style="font-size:13px;color:rgba(255,255,255,.9);display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:4px">
+      <div class="contact">
         <strong style="color:#fff">Narahara Chari Dingari</strong>
-        <span>·</span>
-        <span>Chief Information Officer, SciEncephalon AI</span>
-        <span>·</span>
-        <span>Jacksonville, Florida &amp; Hyderabad</span>
+        <span>· Chief Information Officer, SciEncephalon AI ·</span>
+        <span>Jacksonville, FL &amp; Hyderabad</span>
       </div>
     </div>
   </div>
-  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">13 / 13</span></div>
+  <div class="chrome-bottom"><span>Restricted · YSRCP Leadership Only · May 2026</span><span class="progress"><i></i></span><span class="counter-text">14 / 14</span></div>
 </section>
 
 </div>
@@ -1259,55 +1051,49 @@
 <nav class="nav" aria-label="Slide navigation">
   <button id="prev" aria-label="Previous">&lsaquo;</button>
   <div id="dots" style="display:flex;gap:4px"></div>
-  <span class="counter" id="counter">01 / 13</span>
+  <span class="counter" id="counter">01 / 14</span>
   <button id="next" aria-label="Next">&rsaquo;</button>
 </nav>
 
 <script>
 (function(){
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const total = slides.length;
-  let idx = 0;
-
-  const dotsEl = document.getElementById('dots');
+  const slides=Array.from(document.querySelectorAll('.slide'));
+  const total=slides.length;
+  let idx=0;
+  const dotsEl=document.getElementById('dots');
   slides.forEach((_,i)=>{
-    const d = document.createElement('span');
-    d.className='dot'+(i===0?' is-on':'');
+    const d=document.createElement('span');
+    d.className='dot'+(i===0?' on':'');
     d.addEventListener('click',()=>go(i));
     dotsEl.appendChild(d);
   });
-
-  function pad(n){ return String(n+1).padStart(2,'0'); }
+  function pad(n){return String(n+1).padStart(2,'0')}
   function render(){
     slides.forEach((s,i)=>{
-      s.classList.toggle('is-active', i===idx);
-      s.querySelectorAll('.progress>i').forEach(p=>p.style.setProperty('--p', (idx/(total-1)).toFixed(3)));
-      s.querySelectorAll('.counter-text').forEach(c=>c.textContent = pad(idx)+' / '+pad(total-1));
+      s.classList.toggle('is-active',i===idx);
+      s.querySelectorAll('.progress>i').forEach(p=>p.style.setProperty('--p',(idx/(total-1)).toFixed(3)));
+      s.querySelectorAll('.counter-text').forEach(c=>c.textContent=pad(idx)+' / '+pad(total-1));
     });
-    dotsEl.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('is-on', i===idx));
-    document.getElementById('counter').textContent = pad(idx)+' / '+pad(total-1);
+    dotsEl.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===idx));
+    document.getElementById('counter').textContent=pad(idx)+' / '+pad(total-1);
   }
-  function go(i){
-    idx = Math.max(0, Math.min(total-1, i));
-    render();
-  }
+  function go(i){idx=Math.max(0,Math.min(total-1,i));render()}
   document.getElementById('prev').addEventListener('click',()=>go(idx-1));
   document.getElementById('next').addEventListener('click',()=>go(idx+1));
   document.addEventListener('keydown',e=>{
-    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); go(idx+1); }
-    if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(idx-1); }
-    if(e.key==='Home'){ e.preventDefault(); go(0); }
-    if(e.key==='End'){ e.preventDefault(); go(total-1); }
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(idx+1)}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(idx-1)}
+    if(e.key==='Home'){e.preventDefault();go(0)}
+    if(e.key==='End'){e.preventDefault();go(total-1)}
   });
   let sx=null;
   document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
   document.addEventListener('touchend',e=>{
     if(sx==null)return;
     const dx=e.changedTouches[0].clientX-sx;
-    if(Math.abs(dx)>60){ dx<0?go(idx+1):go(idx-1); }
+    if(Math.abs(dx)>60){dx<0?go(idx+1):go(idx-1)}
     sx=null;
   });
-
   render();
 })();
 </script>
